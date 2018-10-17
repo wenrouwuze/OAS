@@ -1,0 +1,157 @@
+
+<include file="Public/index" />
+<style>
+    a:hover{
+        text-decoration: none !important;
+    }
+</style>
+<!--Main/Index start-->
+<div class="main-con">
+    <div class="main-top">
+        <div class="fun">
+            <a href="{:U('Home/Organize/Organize_recard_show')}">
+                <div class="blue-circle">
+                    <img src="__PUBLIC__/images/structure.png">
+                </div>
+                <div class="char">组织架构</div>
+                <div class="blue-l"></div>
+                <div class="des">组织架构维护及架构图查看</div>
+            </a>
+        </div>
+        <div class="fun">
+            <a href="{:U('Home/Attendance/attendance_record_show')}">
+                <div class="blue-circle">
+                    <img src="__PUBLIC__/images/attendance.png">
+                </div>
+                <div class="char">考勤管理</div>
+                <div class="blue-l"></div>
+                <div class="des">员工加班、请假、出差等管理</div>
+            </a>
+        </div>
+        <div class="fun">
+            <a href="{:U('Home/Employee/employee_roster_show')}">
+                <div class="blue-circle">
+                    <img src="__PUBLIC__/images/roster.png">
+                </div>
+                <div class="char">花名册</div>
+                <div class="blue-l"></div>
+                <div class="des">员工花名册信息及入、转、调、离管理</div>
+            </a>
+        </div>
+        <div class="fun">
+            <a href="{:U('Home/Pay/payroll')}">
+                <div class="blue-circle">
+                    <img src="__PUBLIC__/images/salary.png">
+                </div>
+                <div class="char">工资表</div>
+                <div class="blue-l"></div>
+                <div class="des">工资表整理与工资条发放</div>
+            </a>
+        </div>
+    </div>
+    <div class="main-bottom">
+        <div class="chart-view">
+            <div class="nav-box">
+                <ul>
+                    <li class="on" id="employee_change">人员变动</li>
+                    <li class="off" id="number_of_department">部门人数</li>
+                    <li class="off" id="number_of_incumbency">在职人数</li>
+                </ul>
+            </div>
+
+            <!--柱形图-人员变动-->
+            <div class="chart" id="showChart_employee_change"></div>
+            <!--饼图-部门人数-->
+            <div class="chart" id="showChart_number_of_department" ></div>
+            <!--折线图-在职人数-->
+            <div class="chart" id="showChart_number_of_incumbency" ></div>
+
+        </div>
+        <div class="detail-panel">
+            <div class="detail">
+                <a href="{:U('Home/Main/main_employee_birthday')}">
+                    <div class="circle">
+                        <img src="__PUBLIC__/images/2.png">
+                    </div>
+                    <div class="det">
+                        <span class="char-1">本月生日的员工</span>
+                        <span class="num-1">{$employee_birthday}</span>
+                        <span class="form-1">人</span>
+                    </div>
+                </a>
+            </div>
+            <div class="detail">
+                <a href="{:U('Home/Main/main_employee_formal_half_a_month')}">
+                    <div class="circle">
+                        <img src="__PUBLIC__/images/3.png">
+                    </div>
+                    <div class="det">
+                        <span class="char-1">半个月内转正的员工</span>
+                        <span class="num-1">{$employee_formal}</span>
+                        <span class="form-1">人</span>
+                    </div>
+                </a>
+            </div>
+            <div class="detail">
+                <a href="{:U('Home/Main/main_employee_end')}">
+                    <div class="circle">
+                        <img src="__PUBLIC__/images/4.png">
+                    </div>
+                    <div class="det">
+                        <span class="char-1">两个月内合同到期</span>
+                        <span class="num-1">{$employee_end}</span>
+                        <span class="form-1">人</span>
+                    </div>
+                </a>
+            </div>
+            <div class="detail">
+                <a href="{:U('Home/Main/main_employee_check')}">
+                    <div class="circle">
+                        <img src="__PUBLIC__/images/5.png">
+                    </div>
+                    <div class="det">
+                        <span class="char-1">员工信息等待审核</span>
+                        <span class="num-1">{$employee_waitcheck}</span>
+                        <span class="form-1">人</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Main/Index end-->
+
+<!--</div>-->
+
+<!--footer start-->
+<include file="Public/footer" />
+<!--footer end-->
+<script src="__PUBLIC__/js/01-1.js"></script>
+<script src="__PUBLIC__/js/01-2.js"></script>
+<script src="__PUBLIC__/js/01-3.js"></script>
+<script>
+
+    $(function () {
+        $('.chart').not(':first').css('display','none'); //隐藏其他图表，只显示人员变动
+        $('.chart-view .nav-box ul li').on('click',function () {
+            $(this).attr('class','on').siblings().attr('class','off');
+            var divbox_id = $(this).attr('id');
+            if(divbox_id == 'employee_change'){
+                $('#showChart_employee_change').css('display','block');
+                $('#showChart_number_of_department').css('display','none');
+                $('#showChart_number_of_incumbency').css('display','none');
+
+            }else if(divbox_id == 'number_of_department'){
+                $('#showChart_employee_change').css('display','none');
+                $('#showChart_number_of_department').css('display','block');
+                $('#showChart_number_of_incumbency').css('display','none');
+            }else if(divbox_id == 'number_of_incumbency'){
+                $('#showChart_employee_change').css('display','none');
+                $('#showChart_number_of_department').css('display','none');
+                $('#showChart_number_of_incumbency').css('display','block');
+            }else{
+                return false;
+            }
+        });
+    });
+</script>

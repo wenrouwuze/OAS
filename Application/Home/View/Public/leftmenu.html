@@ -1,0 +1,72 @@
+<style>
+    /*左侧部门树形结构，超出高度后自动出现滚动条*/
+    .left-panel{
+        overflow: auto;
+    }
+</style>
+<div class="list-con">
+
+    <div class="portal">
+
+        <div class="blue-bar"></div>
+        <a href="{:U('Home/Main/main_workplace_show')}">
+            <img src="__PUBLIC__/images/work-station.png">
+            <span class="on">工作台</span>
+        </a>
+    </div>
+    <div class="line"></div>
+    <div>
+        <div class="list">
+            <img src="__PUBLIC__/images/organization-icon.png" class="icon">
+            <img src="__PUBLIC__/images/1.png" class="icon-1">
+            <span class="off">组织管理</span>
+
+                <div class="list-1">
+                    <a href="{:U('Home/Organize/organize_recard_show')}">
+                        <span class="off">组织架构</span>
+                    </a>
+                </div>
+
+        </div>
+        <div class="list">
+            <img src="__PUBLIC__/images/employee-icon.png" class="icon">
+            <img src="__PUBLIC__/images/1.png" class="icon-1">
+            <span class="off">员工管理</span>
+            <div class="list-1">
+                <a href="{:U('Home/Employee/employee_roster_show')}"><span class="off">花名册</span></a>
+            </div>
+        </div>
+        <div class="list">
+            <img src="__PUBLIC__/images/attendance-icon.png" class="icon">
+            <img src="__PUBLIC__/images/1.png" class="icon-1">
+            <span class="off">考勤管理</span>
+            <div class="list-1">
+                <a href="{:U('Home/Attendance/attendance_record_show')}"><span class="off">考勤记录</span></a>
+            </div>
+        </div>
+        <div class="list">
+            <img src="__PUBLIC__/images/performance-icon.png" class="icon">
+            <img src="__PUBLIC__/images/1.png" class="icon-1">
+            <span class="off">绩效管理</span>
+            <div class="list-1">
+                <a href="{:U('Home/Achievements/achievements_record_show')}"><span class="off">绩效考核</span></a>
+            </div>
+        </div>
+        <div class="list">
+            <img src="__PUBLIC__/images/social-insurance-icon.png" class="icon">
+            <img src="__PUBLIC__/images/1.png" class="icon-1">
+            <span class="off">社保管理</span>
+            <div class="list-1">
+                <a href="{:U('Home/SocialSecurity/socialsecurity_record_show')}"><span class="off">社保</span></a>
+            </div>
+        </div>
+        <div class="list">
+            <img src="__PUBLIC__/images/salary-icon.png" class="icon">
+            <img src="__PUBLIC__/images/1.png" class="icon-1">
+            <span class="off">薪酬管理</span>
+            <div class="list-1">
+                <a href="{:U('Home/Pay/payroll')}"><span class="off">工资条</span></a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,499 @@
+<!--header start-->
+<include file="Public/index" />
+<link rel="stylesheet" href="__PUBLIC__/resource/treeview/src/css/bootstrap-treeview.css">
+<script src="__PUBLIC__/resource/treeview/src/js/bootstrap-treeview.js"></script>
+<!--header end-->
+<!--内嵌样式表-->
+<style>
+    .table-responsive tr:hover{
+        background-color: rgba(240,249,255,1);
+    }
+    .tab{
+        overflow: auto;
+    }
+    #remove_username .form-control,#remove_company .form-control{
+        background-color: #e2e2e2;
+    }
+    .main-con .bottom-panel  .tab .table td.name a{
+        color:rgba(0,163,255,1);
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: none !important;
+    }
+</style>
+<!--花名册 start-->
+<div class="main-con">
+    <div class="top-panel">
+        <span class="tit">员工管理</span>
+    </div>
+    <div class="bottom-panel">
+        <div class="left-panel">
+            <div class="title"><span>花名册</span></div>
+            <div class="search-input">
+                <input type="text" name="" id="" value="" class="inp-srh" placeholder="请输入关键字/部门/姓名"/>
+            </div>
+            <!--左侧 部门树形结构 start-->
+            <!--<div class="list">
+                <div class="menu" data-toggle="collapse" data-target="#menu1">
+                    <span class="menu1">
+                        <span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
+                        总裁办公室&nbsp;(4人)
+                    </span>
+                </div>
+                <div class="menu" data-toggle="collapse" data-target="#menu2">
+                    <span class="menu1">
+                        <span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
+                        南方公司&nbsp;(207人)
+                    </span>
+                </div>
+                <div id="menu2" class="collapse in">
+                    <div class="menu" data-toggle="collapse" data-target="#menu21">
+                        <span class="menu2">
+                            <span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
+                            广州事业部&nbsp;(53人)
+                        </span>
+                    </div>
+                    <div id="menu21" class="collapse in">
+                        <div class="menu">
+                            <span class="menu3">售前支出部&nbsp;(2人)</span>
+                        </div>
+                        <div class="menu">
+                            <span class="menu3">销售部&nbsp;(6人)</span>
+                        </div>
+                        <div class="menu">
+                            <span class="menu3">实施服务部&nbsp;(44人)</span>
+                        </div>
+                    </div>
+                    <div class="menu" data-toggle="collapse" data-target="#menu22">
+                        <span class="menu2">
+                            <span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
+                            综合管理部&nbsp;(7人)
+                        </span>
+                    </div>
+                    <div class="menu" data-toggle="collapse" data-target="#menu23">
+                        <span class="menu2">
+                            <span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
+                            云产品事业部&nbsp;(23人)
+                        </span>
+                    </div>
+                </div>
+                <div class="menu" data-toggle="collapse" data-target="#menu3">
+                    <span class="menu1"><span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
+                        北方公司&nbsp;(123人)
+                    </span>
+                </div>
+                <div class="menu" data-toggle="collapse" data-target="#menu4">
+                    <span class="menu1"><span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
+                        研发中心&nbsp;(84人)
+                    </span>
+                </div>
+            </div>-->
+            <!--左侧 部门树形结构 end-->
+            <div id="boxtree" class="list"></div>
+        </div>
+        <div class="right-panel">
+            <div class="title">
+                <div class="tit1">
+                    <a href="{:U('Home/Employee/employee_roster_add')}"><button type="button"class="btn btn-blue">新增</button></a>&nbsp;&nbsp;
+                    <button type="button"class="btn btn-default" onclick="employee_update('1')">信息修改</button>&nbsp;&nbsp;
+                    <button type="button"class="btn btn-default" onclick="employee_remove('1')"  id="employee_remove"  >离职操作</button>&nbsp;&nbsp;
+                    <input type="radio" id="on" name="workstatus"  value="1" <if condition="$employee_status neq 4">checked</if>>
+                    <label for="on">在职</label>&nbsp;&nbsp;
+                    <input type="radio" id="off" name="workstatus" value="4" <if condition="$employee_status eq 4"  >checked</if>>
+                    <label for="off">离职</label>
+                </div>
+                <div class="button">
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#operate-log">操作日志</button>&nbsp;&nbsp;
+                    <!--导入功能存在问题,暂不提供导入功能-->
+                    <!-- <button type="button" class="btn btn-default" id="file_upload">导入</button>&nbsp;&nbsp;-->
+                    <button type="button" class="btn btn-blue" onclick="window.open('{:U(\'Home/Employee/employee_roster_export\')}')">导出</button>
+                </div>
+            </div>
+            <div class="tab">
+                <table class="table table-responsive" style="border: 1px solid #EEEEEE; min-width: 714px; ">
+                    <thead>
+                    <tr style="background:rgba(246,246,246,1);">
+                        <th><input type="checkbox" class="pull-left">序号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>职位名称</th>
+                        <th>手机号码</th>
+                        <th>入职时间</th>
+                        <th>工号</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--<tr class="select" >-->
+                    <volist name="list" id="val">
+                        <tr>
+                            <td><input type="checkbox" class="pull-left" name="em_checkbox"  >{$val.em_id}</td>
+
+                            <td class="name"> <a href="javascript:;" onclick="employee_update('2','{$val.em_id}')" >{$val.em_username}</a></td>
+                            <td>
+                                <if condition="$val.em_sex eq 1"> 男 <else /> 女 </if>
+                            </td>
+                            <td>{$val.em_duties}</td>
+                            <td>{$val.em_mobile}</td>
+                            <td>{$val.em_createtime|date='Y-m-d',###}</td>
+                            <td>{$val.em_worknumber}</td>
+                            <td>
+                                <if condition="$val.em_workstatus neq 4">
+                                    <a href="javascript:;" onclick="employee_update('2','{$val.em_id}')">
+                                        <img src="__PUBLIC__/images/modify.png">
+                                    </a>&nbsp;
+
+                                    <img src="__PUBLIC__/images/remove.png" data-toggle="modal" data-target="#remove" onclick="employee_remove('2','{$val.em_id}','{$val.em_username}','{$val.em_company}')">
+                                </if>
+                            </td>
+                            <td style="display: none;">{$val.em_company}</td>
+                        </tr>
+                    </volist>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="page" id="page">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="date-hidden">
+    <input type="hidden"  value="{$employee_status}" id="em_workstatus_number">
+</div>
+<!--花名册 end-->
+
+<!--</div>-->
+
+<!--离职操作遮罩层 start-->
+<div class="modal fade" id="remove" tabindex="-1" role="dialog" aria-labelledby="removeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <div class="modal-title" id="removeLabel">
+                    离职操作
+                </div>
+            </div>
+            <form action="{:U('Home/Employee/employee_roster_remove')}" method="post" enctype="multipart/form-data">
+                <div class="body">
+                    <div class="list">
+                        <div class="left-1" ><span>姓名</span></div>
+                        <div class="right-1" id="remove_username"><input type="text" class="form-control" readonly name="remove_username"></div>
+                    </div>
+                    <div class="list">
+                        <div class="left-1"><span>部门</span></div>
+                        <div class="right-1" id="remove_company"><input type="text" class="form-control" readonly name="remove_company"></div>
+                    </div>
+                    <div class="list">
+                        <div class="left-1"><span>最后工作日</span><span style="color: RGBA(255, 0, 0, 1)">*</span></div>
+                        <div class="right-1">
+                            <input type="text" class="form-control" value="2018-05-11" placeholder="请选择最后工作日" id="worktime_last" name="remove_worktime_last">
+                            <span class="input-group-addon" style="height: 40px; margin: 0; border-left: none;background-color: transparent; border-color: rgba(221,221,221,1)">
+                                <span class="glyphicon glyphicon-calendar" style="color:RGBA(204, 204, 204, 1); margin-top:5px"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="left-1"><span>社保最后缴纳日</span><span style="color: RGBA(255, 0, 0, 1)">*</span></div>
+                        <div class="right-1">
+                            <input type="text" class="form-control" value="2018-05-11" placeholder="请选择社保最后缴纳日" id="social_insurance_payment_last" name="remove_social_insurance_payment_last">
+                            <span class="input-group-addon" style="height: 40px; margin: 0; border-left: none;background-color: transparent; border-color: rgba(221,221,221,1)">
+                                <span class="glyphicon glyphicon-calendar" style="color:RGBA(204, 204, 204, 1); margin-top:5px"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="left-1"><span>公积金最后缴纳日</span><span style="color: RGBA(255, 0, 0, 1)">*</span></div>
+                        <div class="right-1">
+                            <input type="text" class="form-control" value="2018-05-11" placeholder="请选择公积金最后缴纳日" id="accumulation_fund_payment_last" name="remove_accumulation_fund_payment_last">
+                            <span class="input-group-addon" style="height: 40px; margin: 0; border-left: none;background-color: transparent; border-color: rgba(221,221,221,1)">
+                                <span class="glyphicon glyphicon-calendar" style="color:RGBA(204, 204, 204, 1); margin-top:5px"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" style="float: left">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                        &nbsp;&nbsp;
+                        <button type="submit" class="btn btn-blue" style="float: right">&nbsp;&nbsp;确定&nbsp;&nbsp;</button>
+                    </div>
+                </div>
+                <input type="hidden" name="remove_id">
+            </form>
+        </div>
+    </div>
+</div>
+<!--离职操作遮罩层 end-->
+
+<!--操作日志遮罩层 start-->
+<div class="modal fade" id="operate-log" tabindex="-1" role="dialog" aria-labelledby="operateLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <div class="modal-title" id="operateLabel">
+                    操作日志
+                </div>
+            </div>
+            <div class="body" style="height: 668px">
+                <div class="left">
+                    <div class="detail">
+                        <span>2018-05-15</span>
+                    </div>
+                    <div class="detail"></div>
+                    <div class="detail"></div>
+                    <div class="detail"></div>
+                    <div class="detail">
+                        <span>2018-05-16</span>
+                    </div>
+                    <div class="detail"></div>
+                </div>
+                <div class="img">
+                    <img src="__PUBLIC__/images/timeline.png">
+                </div>
+                <div class="right">
+                    <div class="detail">
+                        <div class="time">
+                            <span>14：32</span>
+                        </div>
+                        <div class="data">
+                            <span>王五的“工资卡号”修改为“112221”</span>
+                            <span>变更人：张三</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="time">
+                            <span>13：11</span>
+                        </div>
+                        <div class="data">
+                            <span>王五“籍贯”修改为“河南郑州” </span>
+                            <span>变更人：张三</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="time">
+                            <span>13：11</span>
+                        </div>
+                        <div class="data">
+                            <span>王五“籍贯”修改为“河南郑州” </span>
+                            <span>变更人：张三</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="time">
+                            <span>13：02</span>
+                        </div>
+                        <div class="data">
+                            <span>王五的“工资卡号”修改为“112221” </span>
+                            <span>变更人：张三</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="time">
+                            <span>11：30</span>
+                        </div>
+                        <div class="data">
+                            <span>王五“籍贯”修改为“河南郑州” </span>
+                            <span>变更人：张三</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="time">
+                            <span>11：11</span>
+                        </div>
+                        <div class="data">
+                            <span>王五的“工资卡号”修改为“112221” </span>
+                            <span>变更人：张三</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--操作日志遮罩层 end-->
+
+<!--footer start-->
+<include file="Public/footer" />
+<!--footer end-->
+<script>
+    /*时间插件*/
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        /*最后工作时间*/
+        laydate.render({
+            elem: '#worktime_last'
+        });
+        /*社保最后缴纳时间*/
+        laydate.render({
+            elem: '#social_insurance_payment_last'
+        });
+        /*公积金最后缴纳时间*/
+        laydate.render({
+            elem: '#accumulation_fund_payment_last'
+        });
+    });
+
+
+
+    /*分页*/
+    layui.use('laypage', function(){
+        var laypage = layui.laypage;
+
+        //执行一个laypage实例
+        laypage.render({
+            elem: 'page' //注意，这里的 test1 是 ID，不用加 # 号
+            ,count: '{$count}' //数据总数，从服务端得到
+            ,layout: ['count',  'limit','prev', 'page', 'next']
+            ,limits: [5,10] //number/页
+            ,curr:'{$curr}'
+            ,limit:'{$limits}'
+            ,groups:'3'
+            ,jump: function(obj,first){
+                if(!first){
+                    var Request = new Object();
+                    //获取排序参数
+                    Request = GetRequest();
+                    if(Request.employee_status){
+                        var url = "{:U('Home/Employee'/employeeShow)}?p="+obj.curr+'&limit='+obj.limit+'&employee_status='+Request.employee_status;
+                    }else{
+                        var url = "{:U('Home/Employee'/employeeShow)}?p="+obj.curr+'&limit='+obj.limit;
+                    }
+
+                    window.location.href = url;
+                }
+            }
+        });
+    });
+
+    /*员工状态查询*/
+    $("input[name='workstatus']").on('click',function(){
+        var url = "{:U('Home/Employee/employee_roster_show')}?employee_status="+$(this).val();
+        window.location.href = url;
+    })
+
+    //获取url参数1
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+    /*离职操作*/
+    function employee_remove(position,id,username,company) {
+        /*离职员工禁止做任何操作*/
+        var workstatus = $("#em_workstatus_number").val();
+        if(workstatus == '4'){
+            message('该员工已离职');
+            return false;
+        }
+        if(position =='1' || position == '2'){
+            if(position == '1'){
+                var number =  $(".tab table").find("input:checkbox[name='em_checkbox']:checked").length;
+                if(number>1){
+                    message('请不要多选');
+                    return  false;
+                }
+                var id = $(".tab table").find("input:checkbox[name='em_checkbox']:checked").parent().text();
+                if(!id){
+                    message('请选择一个员工');
+                    return  false;
+                }
+                var username = $(".tab table").find("input:checkbox[name='em_checkbox']:checked").parent().parent().children().eq(1).text();
+                var company = $(".tab table").find("input:checkbox[name='em_checkbox']:checked").parent().parent().children().last().html();
+            }
+            $("#remove_username input").val(username);
+            $("#remove_company input").val(company);
+            $("input[name='remove_id']").val(id);
+            $('#employee_remove').attr('data-target','#remove');
+            $('#employee_remove').attr('data-toggle','modal');
+        }else{
+            return false;
+        }
+    }
+
+    /*编辑操作*/
+    function employee_update(position,id){
+        var url = "{:U('Home/Employee/employee_roster_edit')}";
+        if(position =='1' || position == '2'){
+            if(position == '1'){
+                var number =  $(".tab table").find("input:checkbox[name='em_checkbox']:checked").length;
+                /*用户多选*/
+                if(number>1){
+                    message('请不要多选');
+                    return  false;
+                }
+                /*用户未选择要修改的员工*/
+                id = $(".tab table").find("input:checkbox[name='em_checkbox']:checked").parent().text();
+                if(!id){
+                    message('请选择一个员工');
+                    return  false;
+                }
+            }
+            /*离职员工禁止做任何操作*/
+            var workstatus = $("#em_workstatus_number").val();
+            if(workstatus == '4'){
+                message('该员工已离职');
+                return false;
+            }
+
+            window.location.href = url + '?em_id=' + id
+        }else{
+            return false;
+        }
+
+    }
+
+    /*树形结构*/
+    $(function(){
+
+        var defaultData = {$departmenttree} ;
+        $('#boxtree').treeview({
+            expandIcon: 'glyphicon glyphicon-chevron-right',
+            collapseIcon: 'glyphicon glyphicon-chevron-down',
+            //nodeIcon: 'glyphicon glyphicon-bookmark',   //设置所有列表树节点上的默认图标。
+            emptyIcon: "glyphicon glyphicon-chevron-right",
+            levels:'1',
+            data: defaultData
+        });
+    });
+
+</script>
+<script type="text/javascript">
+    /*员工管理-花名册-上传文件*/
+    layui.use('upload', function(){
+        var upload = layui.upload;
+
+        //执行实例
+        var uploadInst = upload.render({
+            elem: '#file_upload' //绑定元素
+            ,url: "{:U('Home/Employee/employee_upload')}" //上传接口
+            ,accept:'file'      //允许上传的类型
+            ,done: function(res){
+                if(res.status == 'success'){
+                    layer.msg('上传成功');
+                }
+            }
+            ,error:function (res) {
+                layer.msg('上传失败,请联系管理员');
+            }
+
+        });
+    });
+</script>

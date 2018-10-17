@@ -1,0 +1,1279 @@
+[ 2018-10-08T10:06:44+08:00 ] 127.0.0.1 /index.php/Home/SocialSecurity/socialsecurity_record_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001884s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000950s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+NOTIC: [8] Undefined index: username C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\BaseController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.019902s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.019957s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000712s ]
+
+[ 2018-10-08T10:06:46+08:00 ] 127.0.0.1 /index.php/Home/Login/loginShow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000883s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013046s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001669s ]
+
+[ 2018-10-08T10:06:53+08:00 ] 127.0.0.1 /index.php/Home/Login/loginPro.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `osa_manager` [ RunTime:0.0614s ]
+SQL: SELECT `uid`,`username` FROM `osa_manager` WHERE ( username = 'admin' and password = '787222bc43251c9d734eb4365b595ba6' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `osa_manager` SET `login_time_last`='1538964413' WHERE `uid` = 2 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006413s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000435s ]
+
+[ 2018-10-08T10:06:54+08:00 ] 127.0.0.1 /index.php/Home/Main/main_workplace_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001105s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000192s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000260s ]
+NOTIC: [8] Undefined variable: employee_birthday C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 328 行.
+NOTIC: [8] Undefined variable: employee_formal C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 340 行.
+NOTIC: [8] Undefined variable: employee_end C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 352 行.
+NOTIC: [8] Undefined variable: employee_waitcheck C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 364 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023436s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000885s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000947s ]
+
+[ 2018-10-08T10:07:06+08:00 ] 127.0.0.1 /index.php/Home/OrganizeManage/structure.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+ERR: 无法加载控制器:OrganizeManage
+
+[ 2018-10-08T10:07:08+08:00 ] 127.0.0.1 /index.php/Home/Attendance/attendanceShow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+ERR: 非法操作:attendanceShow
+
+[ 2018-10-08T10:07:09+08:00 ] 127.0.0.1 /index.php/Home/Employee/employeeShow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+ERR: 非法操作:employeeShow
+
+[ 2018-10-08T10:07:11+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0344s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0028s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011108s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011152s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2018-10-08T14:03:59+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000937s ]
+
+[ 2018-10-08T14:04:00+08:00 ] 127.0.0.1 /index.php/Home/Login/loginShow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001063s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006385s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2018-10-08T14:04:10+08:00 ] 127.0.0.1 /index.php/Home/Login/loginPro.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+SQL: SHOW COLUMNS FROM `osa_manager` [ RunTime:0.0238s ]
+SQL: SELECT `uid`,`username` FROM `osa_manager` WHERE ( username = 'admin' and password = '787222bc43251c9d734eb4365b595ba6' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `osa_manager` SET `login_time_last`='1538978650' WHERE `uid` = 2 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2018-10-08T14:04:12+08:00 ] 127.0.0.1 /index.php/Home/Main/main_workplace_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+NOTIC: [8] Undefined variable: employee_birthday C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 328 行.
+NOTIC: [8] Undefined variable: employee_formal C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 340 行.
+NOTIC: [8] Undefined variable: employee_end C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 352 行.
+NOTIC: [8] Undefined variable: employee_waitcheck C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 364 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014510s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014541s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000442s ]
+
+[ 2018-10-08T14:04:30+08:00 ] 127.0.0.1 /index.php/Home/Main/main_workplace_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+NOTIC: [8] Undefined variable: employee_birthday C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 328 行.
+NOTIC: [8] Undefined variable: employee_formal C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 340 行.
+NOTIC: [8] Undefined variable: employee_end C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 352 行.
+NOTIC: [8] Undefined variable: employee_waitcheck C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 364 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013844s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000908s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002194s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002394s ]
+
+[ 2018-10-08T14:04:33+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0333s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0034s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014599s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014662s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+
+[ 2018-10-08T14:06:25+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0023s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2018-10-08T14:41:12+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000683s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0298s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0041s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019596s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000867s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001246s ]
+
+[ 2018-10-08T14:41:14+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_download.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2018-10-08T14:41:22+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_download.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000499s ]
+
+[ 2018-10-08T14:41:23+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_download.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000398s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2018-10-08T14:43:53+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001214s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0243s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0055s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016604s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000872s ]
+
+[ 2018-10-08T14:43:54+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_download.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000667s ]
+
+[ 2018-10-08T14:58:23+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000830s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0151s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0031s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010937s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000717s ]
+
+[ 2018-10-08T14:59:08+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0248s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0033s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012998s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2018-10-08T15:00:16+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0028s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000819s ]
+
+[ 2018-10-08T15:01:09+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000952s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0298s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0059s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015279s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000509s ]
+
+[ 2018-10-08T15:01:13+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0164s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0022s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2018-10-08T15:01:36+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0242s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0026s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2018-10-08T15:01:44+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0069s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011071s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2018-10-08T15:03:03+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0331s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0046s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001103s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001157s ]
+
+[ 2018-10-08T15:03:08+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2018-10-08T15:04:29+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0394s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0048s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015987s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000875s ]
+
+[ 2018-10-08T15:04:33+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001314s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000772s ]
+
+[ 2018-10-08T15:05:20+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001835s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0136s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0026s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013427s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2018-10-08T15:05:23+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001258s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000939s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001039s ]
+
+[ 2018-10-08T16:26:43+08:00 ] 127.0.0.1 /index.php/Home/SocialSecurity/socialsecurity_record_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [8] Undefined index: username C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\BaseController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001007s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016481s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+
+[ 2018-10-08T16:26:45+08:00 ] 127.0.0.1 /index.php/Home/Login/loginShow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001396s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007552s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2018-10-08T16:26:53+08:00 ] 127.0.0.1 /index.php/Home/Login/loginPro.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+SQL: SHOW COLUMNS FROM `osa_manager` [ RunTime:0.0993s ]
+SQL: SELECT `uid`,`username` FROM `osa_manager` WHERE ( username = 'admin' and password = '787222bc43251c9d734eb4365b595ba6' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `osa_manager` SET `login_time_last`='1538987213' WHERE `uid` = 2 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000057s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006575s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2018-10-08T16:26:54+08:00 ] 127.0.0.1 /index.php/Home/Main/main_workplace_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined variable: employee_birthday C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 328 行.
+NOTIC: [8] Undefined variable: employee_formal C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 340 行.
+NOTIC: [8] Undefined variable: employee_end C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 352 行.
+NOTIC: [8] Undefined variable: employee_waitcheck C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\2b5a8577c4783639e4601128e2ee50c7.php 第 364 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.132473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.132587s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001313s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001438s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001569s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001681s ]
+
+[ 2018-10-08T16:27:02+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0912s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0026s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000757s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000800s ]
+
+[ 2018-10-08T16:27:11+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2018-10-08T16:49:42+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002974s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0018s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2018-10-08T16:49:46+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000958s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001027s ]
+
+[ 2018-10-08T17:15:26+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000834s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0019s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011709s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2018-10-08T17:16:12+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0171s ]
+SQL: INSERT INTO `osa_wages` (`pay_month`,`pay_username`,`pay_base_wage`,`pay_job_wage`,`pay_performance_wage`,`pay_extract`,`pay_subsidy_computer`,`pay_subsidy_technology`,`pay_subsidy_comm`,`pay_subsidy_traffic`,`pay_day_number_sj`,`pay_day_number_bj`,`pay_day_number_tx`,`pay_day_number`,`pay_day_number_system`,`pay_day_number_workoff_money`,`pay_day_number_infact`,`pay_wage_number`,`pay_eat_money`,`pay_all_work`,`pay_onther_money_add`,`pay_weekr_report`,`pay_money_late_delete`,`pay_money_delete`,`pay_money_person_delete`,`pay_wage_shouldbe`,`pay_money_housing`,`pay_money_yl`,`pay_money_lost_word`,`pay_money_mz`,`pay_money_hospital`,`pay_money_all`,`pay_money_gs`,`pay_wage_infact`,`pay_create_timestamp`) VALUES ('2018','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990171'),('2018','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990171'),('2018','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990171') [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001416s ]
+
+[ 2018-10-08T17:17:47+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000922s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0020s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012098s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2018-10-08T17:17:51+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0292s ]
+SQL: INSERT INTO `osa_wages` (`pay_month`,`pay_username`,`pay_base_wage`,`pay_job_wage`,`pay_performance_wage`,`pay_extract`,`pay_subsidy_computer`,`pay_subsidy_technology`,`pay_subsidy_comm`,`pay_subsidy_traffic`,`pay_day_number_sj`,`pay_day_number_bj`,`pay_day_number_tx`,`pay_day_number`,`pay_day_number_system`,`pay_day_number_workoff_money`,`pay_day_number_infact`,`pay_wage_number`,`pay_eat_money`,`pay_all_work`,`pay_onther_money_add`,`pay_weekr_report`,`pay_money_late_delete`,`pay_money_delete`,`pay_money_person_delete`,`pay_wage_shouldbe`,`pay_money_housing`,`pay_money_yl`,`pay_money_lost_word`,`pay_money_mz`,`pay_money_hospital`,`pay_money_all`,`pay_money_gs`,`pay_wage_infact`,`pay_create_timestamp`) VALUES ('2018','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990270'),('2018','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990270'),('2018','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990270') [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000774s ]
+
+[ 2018-10-08T17:24:34+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001317s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0032s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010646s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
+[ 2018-10-08T17:24:40+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001778s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0355s ]
+SQL: INSERT INTO `osa_wages` (`pay_month`,`pay_username`,`pay_base_wage`,`pay_job_wage`,`pay_performance_wage`,`pay_extract`,`pay_subsidy_computer`,`pay_subsidy_technology`,`pay_subsidy_comm`,`pay_subsidy_traffic`,`pay_day_number_sj`,`pay_day_number_bj`,`pay_day_number_tx`,`pay_day_number`,`pay_day_number_system`,`pay_day_number_workoff_money`,`pay_day_number_infact`,`pay_wage_number`,`pay_eat_money`,`pay_all_work`,`pay_onther_money_add`,`pay_weekr_report`,`pay_money_late_delete`,`pay_money_delete`,`pay_money_person_delete`,`pay_wage_shouldbe`,`pay_money_housing`,`pay_money_yl`,`pay_money_lost_word`,`pay_money_mz`,`pay_money_hospital`,`pay_money_all`,`pay_money_gs`,`pay_wage_infact`,`pay_create_timestamp`) VALUES ('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990679'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990679'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990679') [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001508s ]
+
+[ 2018-10-08T17:24:57+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0132s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0022s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015064s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015112s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001192s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001271s ]
+
+[ 2018-10-08T17:25:03+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000959s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0125s ]
+SQL: INSERT INTO `osa_wages` (`pay_month`,`pay_username`,`pay_base_wage`,`pay_job_wage`,`pay_performance_wage`,`pay_extract`,`pay_subsidy_computer`,`pay_subsidy_technology`,`pay_subsidy_comm`,`pay_subsidy_traffic`,`pay_day_number_sj`,`pay_day_number_bj`,`pay_day_number_tx`,`pay_day_number`,`pay_day_number_system`,`pay_day_number_workoff_money`,`pay_day_number_infact`,`pay_wage_number`,`pay_eat_money`,`pay_all_work`,`pay_onther_money_add`,`pay_weekr_report`,`pay_money_late_delete`,`pay_money_delete`,`pay_money_person_delete`,`pay_wage_shouldbe`,`pay_money_housing`,`pay_money_yl`,`pay_money_lost_word`,`pay_money_mz`,`pay_money_hospital`,`pay_money_all`,`pay_money_gs`,`pay_wage_infact`,`pay_create_timestamp`) VALUES ('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990702'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990702'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990702') [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000845s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000887s ]
+
+[ 2018-10-08T17:25:23+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0021s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012377s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000636s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2018-10-08T17:25:30+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001847s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002005s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0138s ]
+SQL: INSERT INTO `osa_wages` (`pay_month`,`pay_username`,`pay_base_wage`,`pay_job_wage`,`pay_performance_wage`,`pay_extract`,`pay_subsidy_computer`,`pay_subsidy_technology`,`pay_subsidy_comm`,`pay_subsidy_traffic`,`pay_day_number_sj`,`pay_day_number_bj`,`pay_day_number_tx`,`pay_day_number`,`pay_day_number_system`,`pay_day_number_workoff_money`,`pay_day_number_infact`,`pay_wage_number`,`pay_eat_money`,`pay_all_work`,`pay_onther_money_add`,`pay_weekr_report`,`pay_money_late_delete`,`pay_money_delete`,`pay_money_person_delete`,`pay_wage_shouldbe`,`pay_money_housing`,`pay_money_yl`,`pay_money_lost_word`,`pay_money_mz`,`pay_money_hospital`,`pay_money_all`,`pay_money_gs`,`pay_wage_infact`,`pay_create_timestamp`) VALUES ('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990729'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990729'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990729') [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001208s ]
+
+[ 2018-10-08T17:27:30+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0038s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011413s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2018-10-08T17:27:35+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0163s ]
+SQL: DELETE FROM `osa_wages` WHERE ( pay_create_timestamp = '1539001088' ) [ RunTime:0.0003s ]
+SQL: INSERT INTO `osa_wages` (`pay_month`,`pay_username`,`pay_base_wage`,`pay_job_wage`,`pay_performance_wage`,`pay_extract`,`pay_subsidy_computer`,`pay_subsidy_technology`,`pay_subsidy_comm`,`pay_subsidy_traffic`,`pay_day_number_sj`,`pay_day_number_bj`,`pay_day_number_tx`,`pay_day_number`,`pay_day_number_system`,`pay_day_number_workoff_money`,`pay_day_number_infact`,`pay_wage_number`,`pay_eat_money`,`pay_all_work`,`pay_onther_money_add`,`pay_weekr_report`,`pay_money_late_delete`,`pay_money_delete`,`pay_money_person_delete`,`pay_wage_shouldbe`,`pay_money_housing`,`pay_money_yl`,`pay_money_lost_word`,`pay_money_mz`,`pay_money_hospital`,`pay_money_all`,`pay_money_gs`,`pay_wage_infact`,`pay_create_timestamp`) VALUES ('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990854'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990854'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990854') [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001181s ]
+
+[ 2018-10-08T17:28:10+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0278s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0021s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011689s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000910s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000945s ]
+
+[ 2018-10-08T17:28:15+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0317s ]
+SQL: DELETE FROM `osa_wages` WHERE ( pay_month = '1539001088' ) [ RunTime:0.0003s ]
+SQL: INSERT INTO `osa_wages` (`pay_month`,`pay_username`,`pay_base_wage`,`pay_job_wage`,`pay_performance_wage`,`pay_extract`,`pay_subsidy_computer`,`pay_subsidy_technology`,`pay_subsidy_comm`,`pay_subsidy_traffic`,`pay_day_number_sj`,`pay_day_number_bj`,`pay_day_number_tx`,`pay_day_number`,`pay_day_number_system`,`pay_day_number_workoff_money`,`pay_day_number_infact`,`pay_wage_number`,`pay_eat_money`,`pay_all_work`,`pay_onther_money_add`,`pay_weekr_report`,`pay_money_late_delete`,`pay_money_delete`,`pay_money_person_delete`,`pay_wage_shouldbe`,`pay_money_housing`,`pay_money_yl`,`pay_money_lost_word`,`pay_money_mz`,`pay_money_hospital`,`pay_money_all`,`pay_money_gs`,`pay_wage_infact`,`pay_create_timestamp`) VALUES ('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990894'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990894'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538990894') [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000884s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+
+[ 2018-10-08T17:28:44+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0198s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0038s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2018-10-08T17:28:49+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0260s ]
+SQL: DELETE FROM `osa_wages` WHERE ( pay_month = '1539001088' ) [ RunTime:0.0003s ]
+
+[ 2018-10-08T17:30:19+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0268s ]
+SQL: DELETE FROM `osa_wages` WHERE ( pay_month = '1539001088' ) [ RunTime:0.0003s ]
+
+[ 2018-10-08T17:30:58+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=201808
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0157s ]
+SQL: DELETE FROM `osa_wages` WHERE ( pay_month = '1539001088' ) [ RunTime:0.0004s ]
+
+[ 2018-10-08T17:34:59+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0057s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022292s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022397s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001112s ]
+
+[ 2018-10-08T17:35:03+08:00 ] 127.0.0.1 /index.php/Home/Pay/pay_rocard_upload.html?timestamp=2018-05
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\Users\Administrator\Desktop\OAS\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0151s ]
+SQL: DELETE FROM `osa_wages` WHERE ( pay_month = '1525104000' ) [ RunTime:0.0006s ]
+SQL: INSERT INTO `osa_wages` (`pay_month`,`pay_username`,`pay_base_wage`,`pay_job_wage`,`pay_performance_wage`,`pay_extract`,`pay_subsidy_computer`,`pay_subsidy_technology`,`pay_subsidy_comm`,`pay_subsidy_traffic`,`pay_day_number_sj`,`pay_day_number_bj`,`pay_day_number_tx`,`pay_day_number`,`pay_day_number_system`,`pay_day_number_workoff_money`,`pay_day_number_infact`,`pay_wage_number`,`pay_eat_money`,`pay_all_work`,`pay_onther_money_add`,`pay_weekr_report`,`pay_money_late_delete`,`pay_money_delete`,`pay_money_person_delete`,`pay_wage_shouldbe`,`pay_money_housing`,`pay_money_yl`,`pay_money_lost_word`,`pay_money_mz`,`pay_money_hospital`,`pay_money_all`,`pay_money_gs`,`pay_wage_infact`,`pay_create_timestamp`) VALUES ('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538991302'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538991302'),('1525104000','张三','220.64 ','964.96 ','546.40 ','','80.00 ','','100.00 ','','0','0','','23.00 ','0.00 ','1.00 ','22','7912.00 ','330.00 ','0.00 ','968.00 ','0.00 ','0.00 ','','464.00 ','8746.00 ','824.00 ','216.00 ','0.00 ','307.00 ','0.00 ','5399.00 ','969.75 ','3429.25 ','1538991302') [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000731s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000763s ]
+
+[ 2018-10-08T17:37:28+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000996s ]
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0269s ]
+ERR: 1054:Unknown column 's_id' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `osa_wages` WHERE ( s_id > 0 ) GROUP BY pay_month 
+ERR: 1054:Unknown column 's_id' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `osa_wages` WHERE ( s_id > 0 ) GROUP BY pay_month 
+
+[ 2018-10-08T17:37:40+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0278s ]
+SQL: SELECT * FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY pay_month  [ RunTime:0.0013s ]
+SQL: SELECT FROM_UNIXTIME(pay_month,'%Y-%m') as s_month FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010558s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000859s ]
+
+[ 2018-10-08T17:39:28+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001637s ]
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY pay_month  [ RunTime:0.0011s ]
+SQL: SELECT FROM_UNIXTIME(pay_month,'%Y-%m') as s_month FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2018-10-08T17:39:58+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0305s ]
+SQL: SELECT * FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY pay_month  [ RunTime:0.0030s ]
+SQL: SELECT FROM_UNIXTIME(pay_month,'%Y-%m') as s_month FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016810s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016868s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2018-10-08T17:40:18+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001474s ]
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY pay_month  [ RunTime:0.0012s ]
+SQL: SELECT FROM_UNIXTIME(pay_month,'%Y-%m') as s_month FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014031s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000718s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000750s ]
+
+[ 2018-10-08T17:40:34+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0282s ]
+SQL: SELECT * FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY pay_month  [ RunTime:0.0027s ]
+SQL: SELECT FROM_UNIXTIME(pay_month,'%Y-%m') as s_month FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013269s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000774s ]
+

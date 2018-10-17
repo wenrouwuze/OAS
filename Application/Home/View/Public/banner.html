@@ -1,0 +1,149 @@
+<script src="__PUBLIC__/resource/toastr/toastr.min.js"></script>
+<div class="banner">
+    <div class="banner-left pull-left">
+        <div class="logo">
+            <img src="__PUBLIC__/images/logo.png" class="logo-img">
+            <img src="__PUBLIC__/images/logo-char.png" class="logo-char">
+        </div>
+
+    </div>
+    <div class="banner-right pull-left">
+        <span class="title">人力资源管理系统</span>
+        <div class="banner-r">
+            <a href="javascript:;" onclick="message('暂不支持')">
+                <img src="__PUBLIC__/images/message.png" class="img-msg">
+                <img src="__PUBLIC__/images/message-num.png" class="msg-num">
+                <span class="notice">通知</span>
+            </a>
+            <img src="__PUBLIC__/images/user.png"class="img-user">
+            <span class="name dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="{$uid}">{$username}</a>
+                        <ul class="dropdown-menu pull-right">
+                            <li class="option" data-toggle="modal" data-target="#modify">修改密码</li>
+                            <li class="divider"></li>
+                            <li class="option"><a href="{:U('Home/Login/login_out')}">退出登录</a></li>
+                        </ul>
+                    </span>
+            <img src="__PUBLIC__/images/1.png" class="img-1">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modify" tabindex="-1" role="dialog" aria-labelledby="modifyLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <div class="modal-title" id="modifyLabel">
+                    修改密码
+                </div>
+            </div>
+            <!--修改密码-->
+
+                <div class="body" style="height: 300px">
+                <div class="list-1">
+                    <input type="password" placeholder="当前密码" name="passwordnow">
+                    <span>当前密码</span>
+                    <div class="iserror" style="display: none" id="iserror_now">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                            <small class="text-danger" id="passwordnowerror">原密码不正确，请重新输入！</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-1">
+                    <input type="password" placeholder="请输入6-16位密码，由字母和数字组合" name="passwordnew">
+                    <span>新密码</span>
+                    <div class="iserror" style="display: none" id="iserror_new">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-8">
+                            <small class="text-danger" id="passwordnewerror">与新密码不一致，请再次确认新密码！</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-1">
+                    <input type="password" placeholder="确认密码" name="passwordagin">
+                    <span>确认密码</span>
+                    <div class="iserror" style="display: none" id="iserror_newagin">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-8">
+                            <small class="text-danger" id="passwordaginerror">与新密码不一致，请再次确认新密码！</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" style="float: left">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-blue" style="float: right" id="modify-passwd">&nbsp;&nbsp;确定&nbsp;&nbsp;</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    /*修改密码*/
+    toastr.options.positionClass = 'toast-top-center';
+    $("#modify-passwd").click(function () {
+        var passwordnow = $("input[name='passwordnow']").val();     //当前密码
+        var passwordnew = $("input[name='passwordnew']").val();     //新密码
+        var passwordagin = $("input[name='passwordagin']").val();   //新密码对比
+        var userid = $('.banner-r .dropdown a').attr('id');        //用户id
+
+        if(passwordnow.length > 0){ //当前密码已输入
+            $('#iserror_now').css('display','none');
+          if(passwordnew.length > 0){   //新密码已输入
+              $('#iserror_new').css('display','none');
+              var regx = /^(?![^a-zA-Z]+$)(?!\D+$).{2,10}/;
+              if(regx.test(passwordnew)){   //新密码验证
+                  $('#iserror_new').css('display','none');
+                  if(passwordagin.length > 0){    //再次一遍已输入
+                      $('#iserror_newagin').css('display','none');
+                      if(passwordnew == passwordagin){    // 新密码对比无错误
+                          $('#iserror_newagin').css('display','none');
+                          var url = "{:U('Home/Login/updatePassword')}";
+                          $.post(url,{"userid":userid,"passwordnow":passwordnow,'passwordnew':passwordnew},function(status){
+                              if(status.info == '3'){
+                                  $('#passwordnowerror').html('原密码不正确，请重新输入');
+                                  $('#iserror_now').css('display','block');
+                                  return false;
+                              }else if(status.info == '2'){
+                                  toastr.error('修改失败！请联系管理员');
+                                  return false;
+                              }else{
+                                  toastr.success('修改成功！');
+                                  /*上下之间间隔2秒*/
+                                   var url = "{:U('Home/Login/login')}";
+                                   window.location.href = url;
+                              }
+                          });
+                      }else{
+                          $('#passwordaginerror').html('密码不匹配，请重新输入');
+                          $('#iserror_newagin').css('display','block');
+                          return false;
+                      }
+                  }else{
+                      $('#passwordaginerror').html('请再一次输入新密码');
+                      $('#iserror_newagin').css('display','block');
+                      return false;
+                  }
+              }else{
+                  $('#passwordnewerror').html('新密码不符合规则，请重新输入');
+                  $('#iserror_new').css('display','block');
+                  return false;
+              }
+          }else{
+
+              $('#passwordnewerror').html('请输入新密码');
+              $('#iserror_new').css('display','block');
+              return false;
+          }
+        }else{
+
+            $('#passwordnowerror').html('请输入当前密码');
+            $('#iserror_now').css('display','block');
+            return false;
+        }
+    });
+</script>

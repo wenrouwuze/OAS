@@ -1,0 +1,194 @@
+<!--header start-->
+<include file="Public/index" />
+<style>
+    .tab table tr:hover {
+        background-color: rgba(240, 249, 255, 1);
+    }
+
+    .tab table tr td a {
+        color: rgba(0, 163, 255, 1);
+        text-decoration: none;
+    }
+</style>
+<!--header end-->
+<!--考勤记录-->
+<div class="main-con">
+    <div class="top-panel">
+        <span class="tit">考勤记录</span>
+        <div class="operate">
+            <button class="btn btn-default" data-toggle="modal" data-target="#input-fail">&nbsp;&nbsp;导入&nbsp;&nbsp;</button>&nbsp;&nbsp;
+            <button class="btn btn-blue" onclick="window.open('{:U(\'Home/Attendance/Attendance_record_download\')}?times=all')">&nbsp;&nbsp;导出&nbsp;&nbsp;</button>
+        </div>
+    </div>
+    <div class="bottom-panel" style="background-color: #ffffff;padding-top: 20px">
+        <div class="tab">
+            <table class="table table-responsive" style="border: 1px solid #EEEEEE; min-width: 714px; ">
+                <thead>
+                <tr style="background:rgba(246,246,246,1);">
+                    <th style="width:200px; "><input type="checkbox" class="pull-left" style="margin-right: 10px"><span class="pull-left">序号</span></th>
+                    <th>月度</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="list" id="val">
+                    <tr>
+                        <td><input type="checkbox" class="pull-left" style="margin-right: 10px" ><span class="pull-left">2</span></td>
+                        <td>2018-05</td>
+                        <td class="name"><a href="javascript:;" onclick="window.open('{:U(\'Home/Attendance/Attendance_record_download\')}?times={$val.s_month}')">导出</a></td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+        <div class="page" id="page">
+
+        </div>
+
+    </div>
+</div>
+<!--</div>-->
+<!--导入考勤记录-->
+<div class="modal fade" id="input-fail" tabindex="-1" role="dialog" aria-labelledby="failLabel" aria-hidden="true">
+    <div class="shade">
+        <div class="modal-dialog mymodal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <div class="modal-title" id="inputLabel">
+                        导入考勤记录
+                    </div>
+                </div>
+                <div class="body" style="height: 350px">
+                    <br>
+                    <div class="list">
+                        <div class="left-1" style="width: 25%"><span>月份</span><span style="color: RGBA(255, 0, 0, 1)">*</span></div>
+                        <div class="right-1">
+                            <input type="text" class="form-control" value="2018-05" placeholder="" id="importdate" >
+                            <span class="input-group-addon" style="height: 40px; margin: 0; border-left: none;background-color: transparent; border-color: rgba(221,221,221,1)">
+                            <span class="glyphicon glyphicon-calendar" style="color:RGBA(204, 204, 204, 1); margin-top:5px"></span>
+                        </span>
+                        </div>
+                    </div>
+                    <div class="select-file">
+                        <div class="select">
+                            <butbton type="button" class="btn btn-blue" id="button_import">选择文件</butbton>
+                        </div>
+                        <div class="desc">
+                            （请选择要导入的<span>excel</span>文件）
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" style="float: left">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                        &nbsp;&nbsp;
+                        <button type="button" class="btn btn-blue" style="float: right" id="uploadBtn">&nbsp;&nbsp;确定&nbsp;&nbsp;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer start-->
+<include file="Public/footer" />
+<!--footer end-->
+
+<!--此处引用必须放在时间插件的上面,以防不必要的错误-->
+<script src="__PUBLIC__/resource/layui/layui.all.js"></script>
+<script>
+    /*时间插件*/
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        /*毕业时间*/
+        laydate.render({
+            elem:'#importdate',
+            type:'month'
+        });
+    });
+</script>
+
+<!--上传插件以及进度条-->
+<script type="text/javascript">
+    var upload = layui.upload,
+        element = layui.element;
+    element.init();
+    upload.render({
+        elem: '#button_import', // 文件选择
+        accept: 'file',
+        url: "{:U('Home/Attendance/Attendance_record_uoload')}",
+        data: {
+            t: function () {
+                return $("#importdate").val();
+            }
+        },
+        auto: false, // 设置不自动提交
+        bindAction: '#uploadBtn', // 提交按钮
+        progress: function (e, percent) {
+            console.log("进度：" + percent + '%');
+            element.progress('progressBar', percent + '%');
+
+        },
+        choose: function (obj) {
+            obj.preview(function (index, file, result) {
+                $("#fileName").html(file.name);
+            });
+        },
+        done: function (res) {
+            //layer.msg(res.msg);
+            layer.msg(res.describe);
+            window.location.href = "{:U('Home/Attendance/Attendance_record_show')}";
+        },
+        error: function (res) {
+            //layer.msg(res.msg);
+            console.log(res);
+            layer.msg(res)
+        }
+    });
+</script>
+
+<!--分页插件-->
+<script type="text/javascript">
+    /*分页*/
+    layui.use('laypage', function () {
+        var laypage = layui.laypage;
+
+        //执行一个laypage实例
+        laypage.render({
+            elem: 'page' //注意，这里的 test1 是 ID，不用加 # 号
+            , count: '{$count}' //数据总数，从服务端得到
+            , layout: ['count', 'limit', 'prev', 'page', 'next']
+            , limits: [10] //number/页
+            , curr: '{$curr}'
+            , limit: '{$limits}'
+            , groups: '3'
+            , jump: function (obj, first) {
+                if (!first) {
+                    var Request = new Object();
+                    //获取排序参数
+                    Request = GetRequest();
+                    if (Request.employee_status) {
+                        var url = "{:U('Home/Attendance/Attendance_record_show')}?p=" + obj.curr + '&limit=' + obj.limit + '&employee_status=' + Request.employee_status;
+                    } else {
+                        var url = "{:U('Home/Attendance/Attendance_record_show')}?p=" + obj.curr + '&limit=' + obj.limit;
+                    }
+
+                    window.location.href = url;
+                }
+            }
+        });
+    });
+    //获取url参数1
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+</script>

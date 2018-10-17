@@ -1,0 +1,99 @@
+<!--header start-->
+<include file="Public/index" />
+<!--header end-->
+<!--style start-->
+<!--style start-->
+<style>
+    .table-responsive tr:hover{
+        background-color: rgba(240,249,255,1);
+    }
+    a:hover{
+        text-decoration: none !important;
+    }
+</style>
+<!--style end-->
+<!--style end-->
+<div class="main-con">
+    <div class="top-panel">
+        <div class="tit-1">
+            <a href="{:U('Home/Main/main_workplace_show')}"><button class="btn btn-default">返回</button></a>
+        </div>
+    </div>
+    <div class="bottom-panel" style="background-color: #ffffff;padding-top: 20px">
+        <div class="nav-box" style="border-bottom: 1px solid #E6E6E6;margin-top: 2%">
+            <ul style="padding: 0px; width: 65%;height: 40px">
+                <li class="off-1" style="width: 25%"><a href="{:U('Home/Main/main_employee_birthday')}">本月生日的员工</a></li>
+                <li class="on-1" style="width: 25%"><a href="{:U('Home/Main/main_employee_formal_half_a_month')}">半个月内转正的员工</a></li>
+                <li class="off-1" style="width: 25%"><a href="{:U('Home/Main/main_employee_end')}">两个月内合同到期</a></li>
+                <li class="off-1" style="width: 25%"><a href="{:U('Home/Main/main_employee_check')}">员工信息等待审核</a></li>
+            </ul>
+        </div>
+        <div class="tab" style="margin-top: 20px">
+            <table class="table table-responsive" style="border: 1px solid #EEEEEE; min-width: 714px; ">
+                <thead>
+                <tr style="background:rgba(246,246,246,1);">
+                    <th style="width:100px; "><input type="checkbox" class="pull-left" style="margin-right: 10px"><span class="pull-left">序号</span></th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>工号</th>
+                    <th>工作地区</th>
+                    <th>一级部门</th>
+                    <th>转正时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="list" id="val" >
+                    <tr>
+                        <td><input type="checkbox" class="pull-left" style="margin-right: 10px"><span class="pull-left">{$val.em_id}</span></td>
+                        <td class="name">{$val.em_username}</td>
+                        <td>
+                            <if condition="$val.em_sex eq 1">
+                                男
+                                <else /> 女
+                            </if>
+                        </td>
+                        <td>{$val.em_worknumber}</td>
+                        <td>{$val.em_workplace}</td>
+                        <td>{$val.department_name}</td>
+                        <td>{$val.em_formaltime|date='Y-m-d',###}</td>
+                    </tr>
+
+                </volist>
+                </tbody>
+            </table>
+        </div>
+        <div class="page" id="page">
+
+        </div>
+
+    </div>
+</div>
+
+<!--</div>-->
+
+<!--footer start-->
+<include file="Public/footer" />
+<!--footer end-->
+<script>
+    /*分页*/
+    layui.use('laypage', function(){
+        var laypage = layui.laypage;
+
+        //执行一个laypage实例
+        laypage.render({
+            elem: 'page' //注意，这里的 test1 是 ID，不用加 # 号
+            ,count: '{$count}' //数据总数，从服务端得到
+            ,layout: ['count',  'limit','prev', 'page', 'next']
+            ,limits: [5,10,20]
+            ,curr:'{$curr}'
+            ,limit:'{$limits}'
+            ,groups:'3'
+            ,jump: function(obj,first){
+                if(!first){
+                    var url = "{:U('Home/Main/main_employee_formal_half_a_month')}?p="+obj.curr+'&limit='+obj.limit;
+                    window.location.href = url;
+                }
+            }
+        });
+    });
+</script>

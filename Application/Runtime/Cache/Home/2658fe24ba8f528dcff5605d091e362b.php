@@ -1,0 +1,83 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td style="background-color: #00B050">月份</td>
+            <td>姓名</td>
+            <td>基本工资</td>
+            <td>职位工资</td>
+            <td>绩效工资</td>
+            <td>提成/奖金</td>
+            <td>电脑补助</td>
+            <td>技术补助</td>
+            <td>通讯补助</td>
+            <td>交通补助</td>
+            <td>事假天数</td>
+            <td>病假天数</td>
+            <td>调休天数</td>
+            <td>计薪天数</td>
+            <td>系统工时（只填写实施人员）</td>
+            <td>带薪假期（不包括调休）</td>
+            <td>实际出勤天数</td>
+            <td>计薪工资</td>
+            <td>餐补</td>
+            <td>全勤奖</td>
+            <td>其他补发项目</td>
+            <td>周报扣款</td>
+            <td>迟到未打卡扣款</td>
+            <td>其他扣款</td>
+            <td>个人扣款</td>
+            <td>应发工资</td>
+            <td>住房公积金</td>
+            <td>养老保险</td>
+            <td>失业保险</td>
+            <td>门诊/医疗保险</td>
+            <td>住院</td>
+            <td>税前工资</td>
+            <td>个税</td>
+            <td>实发工资</td>
+        </tr>
+        <tr>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+            <td>%s</td>
+        </tr>
+    </table>
+</body>
+</html>

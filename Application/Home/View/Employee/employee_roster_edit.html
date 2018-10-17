@@ -1,0 +1,518 @@
+<!--header start-->
+<include file="Public/index"/>
+<!--header end-->
+<!--内嵌样式表 start-->
+<style>
+    .list-con {
+        height: 1375px;
+    }
+
+    .button {
+        display: none;
+    }
+
+    /*输入框边框消失*/
+    .main-con .bottom-panel .list-detail .info span input, select {
+        border: none;
+        cursor: default;
+    }
+
+    /*css3属性，可能存在浏览器兼容问题*/
+    select {
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: #fff;
+        outline: 0;
+    }
+
+    /**/
+    .educationalinfo, .wageinfo {
+        display: none;
+    }
+
+</style>
+<!--内嵌样式表 end-->
+
+<!--员工修改 start-->
+<div class="main-con" style="height: 1374px">
+    <div class="top-panel">
+        <span class="tit">员工管理</span>
+    </div>
+    <div class="bottom-panel" style="background-color: #ffffff; height: 1266px">
+        <div class="tit-1">
+            <a href="{:U('Home/Employee/EmployeeShow')}">
+                <button class="btn btn-default">返回</button>
+            </a>
+        </div>
+        <div class="nav-box" style="border-bottom: 1px solid #E6E6E6">
+            <ul style="padding: 0px" class="ulbox">
+                <li class="on-1"><span class="li_baseinfo">基本信息</span></li>
+                <li class="off-1"><span class="li_educationalinfo">教育信息</span></li>
+                <li class="off-1"><span class="li_wageinfo">工资信息</span></li>
+            </ul>
+        </div>
+        <form action="{:U('Home/Employee/employee_roster_edit_pro')}" method="post" enctype="multipart/form-data">
+            <!--循环填充数据 start-->
+            <volist name="employee" id="val">
+                <!--基本信息 start-->
+                <div class="baseinfo">
+                    <div class="list-tit">
+                        <span>个人资料</span>
+                        <div class="edit">
+                            <img src="__PUBLIC__/images/edit.png" style="margin-right: 4px; float: left">
+                            <span onclick="employee_edit_status(1)">编辑</span>
+                        </div>
+                    </div>
+                    <div class="list-detail" style="height: 460px">
+                        <div class="info" style="height: 450px">
+                            <div class="list_main">
+                                <div class="left"><span>姓名：</span></div>
+                                <div class="right"><span><input type="text" name="em_username"
+                                                                value="{$val.em_username}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>出生年月：</span></div>
+                                <div class="right"><span><input type="text" name="em_birthday"
+                                                                value="{$val.em_birthday|date='Y-m-d',###}"
+                                                                readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>民族：</span></div>
+                                <div class="right"><span><input type="text" name="em_nation" value="{$val.em_nation}"
+                                                                readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>手机号码：</span></div>
+                                <div class="right"><span><input type="text" name="em_mobile" value="{$val.em_mobile}"
+                                                                readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>邮箱：</span></div>
+                                <div class="right"><span><input type="text" name="em_email" value="{$val.em_email}"
+                                                                readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>籍贯：</span></div>
+                                <div class="right"><span><input type="text" name="em_province"
+                                                                value="{$val.em_province}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>户口所在地：</span></div>
+                                <div class="right"><span><input type="text" name="em_register_place"
+                                                                value="{$val.em_register_place}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>婚姻状况：</span></div>
+                                <div class="right">
+                                        <span>
+                                            <select name="em_marital_status" disabled>
+                                                <option value='1' <if
+                                                    condition="$val.em_marital_status eq 1">selected</if> >未婚</option>
+                                                <option value='2' <if
+                                                    condition="$val.em_marital_status eq 2">selected</if> >已婚</option>
+                                                <option value='3' <if
+                                                    condition="$val.em_marital_status eq 3">selected</if> >离异</option>
+                                                <option value='4' <if
+                                                    condition="$val.em_marital_status eq 4">selected</if>>丧偶</option>
+                                            </select>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>孩子出生年月：</span></div>
+                                <div class="right"><span><input type="text" name="em_baby_birthday"
+                                                                value="{$val.em_baby_birthday|date='Y-m-d',###}"
+                                                                readonly></span></div>
+                            </div>
+                        </div>
+                        <div class="info" style="height: 450px">
+                            <div class="list_main">
+                                <div class="left"><span>性别：</span></div>
+                                <div class="right">
+                                        <span>
+                                            <select name="em_sex" disabled>
+                                                <option value="1" <if
+                                                    condition="$val.em_sex eq 1">selected</if>>男</option>
+                                                <option value="2" <if
+                                                    condition="$val.em_sex eq 2">selected</if>>女</option>
+                                            </select>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>年龄：</span></div>
+                                <div class="right"><span><input type="text" name="em_age" value="{$val.em_age}"
+                                                                readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>政治面貌：</span></div>
+                                <div class="right">
+                                        <span>
+                                            <select name="em_political_face" disabled>
+                                                <volist name="political" id="v">
+                                                    <option value="{$v}" <if condition="$val.em_political_face eq $v">selected</if> >{$v}</option>
+                                                </volist>
+                                             </select>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>身份证号：</span></div>
+                                <div class="right"><span><input type="text" name="em_idcard" value="{$val.em_idcard}"
+                                                                readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>微信号：</span></div>
+                                <div class="right"><span><input type="text" name="em_wxnumber"
+                                                                value="{$val.em_wxnumber}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>户口类型：</span></div>
+                                <div class="right">
+                                        <span>
+                                            <select name="em_registerplace_type" disabled>
+                                                <option value='1' <if condition="$val.em_registerplace_type eq 1">selected</if>>城镇</option>
+                                                <option value='2' <if condition="$val.em_registerplace_type eq 2">selected</if>>农村</option>
+                                            </select>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>现住址：</span></div>
+                                <div class="right"><span><input type="text" name="em_addressnow"
+                                                                value="{$val.em_addressnow}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>生育状况：</span></div>
+                                <div class="right">
+                                        <span>
+                                             <select name="em_reproductive_status" disabled>
+                                                <option value='1'<if condition="$val.em_reproductive_status eq 1">selected</if> >已育</option>
+                                                 <option value='2'  <if condition="$val.em_reproductive_status eq 1">selected</if> >未育</option>
+                                            </select>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-tit">基本情况</div>
+                    <div class="list-detail" style="height: 400px">
+                        <div class="info" style="height: 350px">
+                            <div class="list_main">
+                                <div class="left"><span>工号：</span></div>
+                                <div class="right"><span>{$val.em_worknumber}</span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>工作地区：</span></div>
+                                <div class="right"><span><input type="text" name="em_workplace"
+                                                                value="{$val.em_workplace}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>职务：</span></div>
+                                <div class="right"><span><input type="text" name="em_duties" value="{$val.em_duties}"
+                                                                readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>直属领导：</span></div>
+                                <div class="right"><span><input type="text" name="em_firstleader"
+                                                                value="{$val.em_firstleader}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>入职时间：</span></div>
+                                <div class="right"><span><input type="text" name="em_createtime"
+                                                                value="{$val.em_createtime|date='Y-m-d',###}" readonly
+                                                                id="em_createtime"></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>转正时间：</span></div>
+                                <div class="right"><span><input type="text" name="em_formaltime"
+                                                                value="{$val.em_formaltime|date='Y-m-d',###}" readonly
+                                                                id="em_formaltime"></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>续签次数：</span></div>
+                                <div class="right"><span><input type="text" name="em_renew" value="{$val.em_renew}"
+                                                                readonly></span></div>
+                            </div>
+                        </div>
+                        <div class="info" style="height: 350px">
+                            <div class="list_main">
+                                <div class="left"><span>状态：</span></div>
+                                <div class="right">
+                                        <span>
+                                             <select name="em_workstatus" disabled>
+                                                 <option value='1' <if condition="$val.em_workstatus eq 1">selected</if>>试用期</option>
+                                                 <option value='2' <if condition="$val.em_workstatus eq 2">selected</if>>实习</option>
+                                                 <option value='3' <if condition="$val.em_workstatus eq 3">selected</if>>正式</option>
+                                                 <option value='4' <if condition="$val.em_workstatus eq 4">selected</if>>离职</option>
+                                </select>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>所属公司：</span></div>
+                                <div class="right"><span><input type="text" name="em_company" value="{$val.em_company}"
+                                                                readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>一级部门：</span></div>
+                                <div class="right"><span>{$val.em_department_firstname}</span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>二级部门：</span></div>
+                                <div class="right"><span>{$val.em_department_secondname}</span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>三级部门：</span></div>
+                                <div class="right"><span>{$val.em_department_thirdname}</span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>合同到期时间：</span></div>
+                                <div class="right"><span><input type="text" name="em_endtime"
+                                                                value="{$val.em_endtime|date='Y-m-d',###}" readonly
+                                                                id="em_endtime"></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>司龄：</span></div>
+                                <div class="right"><span><input type="text" name="em_workage" value="{$val.em_workage}"
+                                                                readonly></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--基本信息 end-->
+
+                <!--教育信息 start-->
+                <div class="educationalinfo">
+                    <div class="list-tit">
+                        <span>教育信息</span>
+                        <div class="edit">
+                            <img src="__PUBLIC__/images/edit.png" style="margin-right: 4px; float: left">
+                            <span onclick="employee_edit_status(1)">编辑</span>
+                        </div>
+                    </div>
+                    <div class="list-detail" style="height: 200px">
+                        <div class="info" style="height: 190px">
+                            <div class="list_main">
+                                <div class="left"><span>毕业学校：</span></div>
+                                <div class="right"><span><input type="text" name="em_graduateschool"
+                                                                value="{$val.em_graduateschool}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>专业：</span></div>
+                                <div class="right"><span><input type="text" name="em_major" value="{$val.em_major}"
+                                                                readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>职称：</span></div>
+                                <div class="right"><span><input type="text" name="em_professional_title"
+                                                                value="{$val.em_professional_title}" readonly></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info" style="height: 190px">
+                            <div class="list_main">
+                                <div class="left"><span>毕业时间：</span></div>
+                                <div class="right">
+                                        <span>
+                                            <input type="text" name="em_graduatetime" value="{$val.em_graduatetime}"
+                                                   readonly id="em_graduatetime">
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>文化程度：</span></div>
+                                <div class="right">
+                                        <span>
+                                             <select name="em_degreeofeducation">
+                                                <option value="博士" <if condition="$val.em_degreeofeducation eq  '博士'"> selected</if>>博士</option>
+                                                 <option value="硕士" <if condition="$val.em_degreeofeducation eq  '硕士'"> selected</if>>硕士</option>
+                                                 <option value="本科" <if condition="$val.em_degreeofeducation eq  '本科'"> selected</if>>本科</option>
+                                                 <option value="大专" <if condition="$val.em_degreeofeducation eq  '大专'"> selected</if>>大专</option>
+                                                 <option value="中专" <if condition="$val.em_degreeofeducation eq  '中专'"> selected</if>>中专</option>
+                                            </select>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>资质证书：</span></div>
+                                <div class="right"><span><input type="text" name="em_qualificationCertificate"
+                                                                value="{$val.em_qualificationcertificate}"
+                                                                readonly></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--教育信息 end-->
+
+                <!--工资信息 start-->
+                <div class="wageinfo">
+                    <div class="list-tit">
+                        <span>工资信息</span>
+                        <div class="edit">
+                            <img src="__PUBLIC__/images/edit.png" style="margin-right: 4px; float: left">
+                            <span onclick="employee_edit_status(1)">编辑</span>
+                        </div>
+                    </div>
+                    <div class="list-detail" style="height: 360px">
+                        <div class="info" style="height: 350px">
+                            <div class="list_main">
+                                <div class="left"><span>工资卡号：</span></div>
+                                <div class="right"><span><input type="text" name="em_banknumber"
+                                                                value="{$val.em_banknumber}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>金蝶核算口径（薪金）：</span></div>
+                                <div class="right">
+                                        <span>
+                                             <select name="em_kingdee" disabled>
+                                                <volist name="kingdee" id="v">
+                                                    <option value="{$v}-{$key}" <if
+                                                        condition="$v-$key  eq $val.em_kingdee">selected</if>>{$v}</option>
+                                                </volist>
+                                            </select>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>岗位费用金蝶归属部门：</span></div>
+                                <div class="right">
+                                        <span>
+                                            <select name="em_kingdeedepartment">
+                                                <volist name="kingdeedepartment" id="v">
+                                                    <option value="{$v}-{$key}" <if
+                                                        condition="$v-$key  eq $val.em_kingdee">selected</if>>{$v}</option>
+                                                </volist>
+                                            </select>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>电脑补助：</span></div>
+                                <div class="right"><span><input type="text" name="em_computersubsidy"
+                                                                value="{$val.em_computersubsidy}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>技术补助：</span></div>
+                                <div class="right"><span><input type="text" name="em_skillsubsidy"
+                                                                value="{$val.em_skillsubsidy}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>基本工资：</span></div>
+                                <div class="right"><span><input type="text" name="em_basewage"
+                                                                value="{$val.em_basewage}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>标准绩效工资：</span></div>
+                                <div class="right"><span><input type="text" name="em_standard_performance_wage"
+                                                                value="{$val.em_standard_performance_wage}"
+                                                                readonly></span></div>
+                            </div>
+                        </div>
+                        <div class="info" style="height: 350px">
+                            <div class="list_main">
+                                <div class="left"><span>银行：</span></div>
+                                <div class="right">
+                                        <span>
+                                            <select name="em_bankname" disabled>
+                                                <volist name="bank" id="v">
+                                                    <option value="{$v}" <if
+                                                        condition="$val.em_bankname eq $v">selected</if>>{$v}</option>
+                                                </volist>
+                                            </select>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>薪金归属：</span></div>
+                                <div class="right">
+                                        <span>
+                                            <select name="em_wageascription">
+                                                <volist name="wageAscription" id="v">
+                                                    <option value="{$v}" <if condition="$val.em_wageascription eq $v">selected</if>>{$v}</option>
+                                                </volist>
+                                            </select>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>通讯补助：</span></div>
+                                <div class="right"><span><input type="text" name="em_telsubsidy"
+                                                                value="{$val.em_telsubsidy}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>交通补助：</span></div>
+                                <div class="right"><span><input type="text" name="em_tracfficsidy"
+                                                                value="{$val.em_tracfficsidy}" readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>工资：</span></div>
+                                <div class="right"><span><input type="text" name="em_wage" value="{$val.em_wage}"
+                                                                readonly></span></div>
+                            </div>
+                            <div class="list_main">
+                                <div class="left"><span>职位工资：</span></div>
+                                <div class="right"><span><input type="text" name="em_positionwage"
+                                                                value="{$val.em_positionwage}" readonly></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--工资信息 end-->
+
+                <!--表单提交按钮-->
+                <div class="button">
+                    <button type="reset" class="btn btn-default" style="width: 80px">取消</button>
+                    <button type="submit" class="btn btn-blue pull-right" style="width: 80px">保存</button>
+                </div>
+            </volist>
+            <!--循环填充数据 end-->
+            <input type="hidden" value="{$em_id}" name="em_id">
+        </form>
+    </div>
+</div>
+<!--员工修改 end-->
+
+<!--</div>-->
+<!--footer start-->
+<include file="Public/footer"/>
+<!--footer end-->
+<script>
+    $(function () {
+        /*选项卡切换*/
+        $('.ulbox li').on('click', function () {
+            $(this).attr('class', 'on-1');
+            $(this).siblings().attr('class', 'off-1');
+            if ($(this).children().attr('class') == 'li_baseinfo') {
+                $('.baseinfo').css('display', 'block');
+                $('.educationalinfo').css('display', 'none');
+                $('.wageinfo').css('display', 'none');
+            } else if ($(this).children().attr('class') == 'li_educationalinfo') {
+                $('.baseinfo').css('display', 'none');
+                $('.educationalinfo').css('display', 'block');
+                $('.wageinfo').css('display', 'none');
+            } else if ($(this).children().attr('class') == 'li_wageinfo') {
+                $('.baseinfo').css('display', 'none');
+                $('.educationalinfo').css('display', 'none');
+                $('.wageinfo').css('display', 'block');
+            } else {
+                return false;
+            }
+        });
+    });
+
+    function employee_edit_status(status) {
+        if (status == 1) {
+            $("form input").removeAttr('readonly');
+            $("form input").css('border', '1px solid #DDDDDD');
+            /* $(".baseinfo input").removeAttr('readonly');
+             $(".baseinfo input").css('border','1px solid #DDDDDD');
+             $(".baseinfo select").css('border','1px solid #DDDDDD');
+             $(".baseinfo select").removeAttr('disabled');*/
+            /*编辑按钮消失，保存按钮出现*/
+            $('.button').css('display', 'block');
+            $('.edit').css('display', 'none');
+        } else {
+            return false;
+        }
+    }
+</script>
