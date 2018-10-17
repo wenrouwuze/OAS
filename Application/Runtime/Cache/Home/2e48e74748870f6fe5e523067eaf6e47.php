@@ -187,7 +187,7 @@
     <div class="portal">
 
         <div class="blue-bar"></div>
-        <a href="<?php echo U('Home/Main/Index');?>">
+        <a href="<?php echo U('Home/Main/main_workplace_show');?>">
             <img src="/Public/images/work-station.png">
             <span class="on">工作台</span>
         </a>
@@ -200,7 +200,7 @@
             <span class="off">组织管理</span>
 
                 <div class="list-1">
-                    <a href="<?php echo U('Home/OrganizeManage/structure');?>">
+                    <a href="<?php echo U('Home/Organize/organize_recard_show');?>">
                         <span class="off">组织架构</span>
                     </a>
                 </div>

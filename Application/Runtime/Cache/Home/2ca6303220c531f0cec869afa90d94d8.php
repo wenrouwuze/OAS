@@ -16,7 +16,20 @@
 <link rel="stylesheet" href="/Public/resource/layui/css/layui.css">
 <script src="/Public/resource/layui/layui.js"></script>
 <!--layui引入 end-->
-
+<style>
+    a:link{
+        text-decoration:none;
+    }
+    a:visited{
+        text-decoration:none;
+    }
+    a:hover{
+        text-decoration:none;
+    }
+    a:active{
+        text-decoration:none;
+    }
+</style>
 <body>
 
 <!--header end-->
@@ -255,10 +268,11 @@
 <script src="/Public/resource/treeview/src/js/bootstrap-treeview.js"></script>
 <!--style start-->
 <style>
-    .table-responsive tr:hover{
-        background-color: rgba(240,249,255,1);
+    .table-responsive tr:hover {
+        background-color: rgba(240, 249, 255, 1);
     }
-    a:hover{
+
+    a:hover {
         text-decoration: none !important;
     }
 </style>
@@ -271,64 +285,10 @@
         <div class="left-panel">
             <div class="title"><span>开普云</span></div>
             <div class="search-input">
-                <input type="text" name="" id="" value="" class="inp-srh" placeholder="请输入关键字/部门/姓名"/>
+                <input type="text" name="searchname" id="query_search" value="" class="inp-srh"
+                       placeholder="请输入关键字/部门/姓名"/>
             </div>
-            <!--左侧部门树形结构 start-->
-            <!--<div class="list">
-                <div class="menu" data-toggle="collapse" data-target="#menu1">
-                    <span class="menu1">
-                        <span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
-                        总裁办公室&nbsp;(4人)
-                    </span>
-                </div>
-                <div class="menu" data-toggle="collapse" data-target="#menu2">
-                    <span class="menu1">
-                        <span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
-                        南方公司&nbsp;(207人)
-                    </span>
-                </div>
-                <div id="menu2" class="collapse in">
-                    <div class="menu" data-toggle="collapse" data-target="#menu21">
-                        <span class="menu2">
-                            <span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
-                            广州事业部&nbsp;(53人)
-                        </span>
-                    </div>
-                    <div id="menu21" class="collapse in">
-                        <div class="menu">
-                            <span class="menu3">售前支出部&nbsp;(2人)</span>
-                        </div>
-                        <div class="menu">
-                            <span class="menu3">销售部&nbsp;(6人)</span>
-                        </div>
-                        <div class="menu">
-                            <span class="menu3">实施服务部&nbsp;(44人)</span>
-                        </div>
-                    </div>
-                    <div class="menu" data-toggle="collapse" data-target="#menu22">
-                        <span class="menu2">
-                            <span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
-                            综合管理部&nbsp;(7人)
-                        </span>
-                    </div>
-                    <div class="menu" data-toggle="collapse" data-target="#menu23">
-                        <span class="menu2">
-                            <span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
-                            云产品事业部&nbsp;(23人)
-                        </span>
-                    </div>
-                </div>
-                <div class="menu" data-toggle="collapse" data-target="#menu3">
-                    <span class="menu1"><span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
-                        北方公司&nbsp;(123人)
-                    </span>
-                </div>
-                <div class="menu" data-toggle="collapse" data-target="#menu4">
-                    <span class="menu1"><span class="glyphicon glyphicon-chevron-right" style="font-size: small;color: #D8D8D8" aria-hidden="true"></span>
-                        研发中心&nbsp;(84人)
-                    </span>
-                </div>
-            </div>-->
+
             <div id="boxtree" class="list"></div>
             <!--左侧部门树形结构 end-->
         </div>
@@ -342,38 +302,43 @@
                     </span>
                 <div class="button">
                     <!--<a href="<?php echo U('Home/OrganizeManage/departmentAdd');?>"><button type="button" class="btn btn-default">添加部门</button></a>&nbsp;&nbsp;-->
-                    <button type="button" class="btn btn-default" onclick="alert('暂不支持此功能')">导入</button>&nbsp;&nbsp;
+                    <button type="button" class="btn btn-default" onclick="message('暂不支持')">导入</button>&nbsp;&nbsp;
                     <!-- <button type="button" class="btn btn-default"  ><a href="<?php echo U('Home/OrganizeManage/export_o');?>">导出</a></button>&nbsp;&nbsp;-->
-                    <button type="button" class="btn btn-blue" onclick="window.open('<?php echo U('Home/Organize/organize_recard_export');?>')">导出</button>
+                    <button type="button" class="btn btn-blue"
+                            onclick="window.open('<?php echo U('Home/Organize/organize_recard_export');?>')">导出
+                    </button>
                 </div>
             </div>
-            <div class="tab">
-                <table class="table table-responsive" style="border: 1px solid #EEEEEE">
-                    <thead>
-                    <tr style="background:rgba(246,246,246,1);">
-                        <th><input type="checkbox" class="pull-left">序号</th>
-                        <th>姓名</th>
-                        <th>性别</th>
-                        <th>职位名称</th>
-                        <th>部门负责人</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><tr>
-                            <td><input type="checkbox" class="pull-left" ><?php echo ($val["em_id"]); ?></td>
-                            <td class="name"><?php echo ($val["em_username"]); ?></td>
-                            <td>
-                                <?php if($val["em_sex"] == 1): ?>男
-                                    <?php else: ?> 女<?php endif; ?>
-                            </td>
-                            <td><?php echo ($val["em_duties"]); ?></td>
-                            <td><?php echo ($val["department_boss"]); ?></td>
-                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+            <div id="table_page" >
+                <div class="tab"  >
+                    <table class="table table-responsive" style="border: 1px solid #EEEEEE">
+                        <thead>
+                        <tr style="background:rgba(246,246,246,1);">
+                            <th><input type="checkbox" class="pull-left">序号</th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>职位名称</th>
+                            <th>部门负责人</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><tr>
+                                <td><input type="checkbox" class="pull-left"><?php echo ($val["em_id"]); ?></td>
+                                <td class="name"><?php echo ($val["em_username"]); ?></td>
+                                <td>
+                                    <?php if($val["em_sex"] == 1): ?>男
+                                        <?php else: ?>
+                                        女<?php endif; ?>
+                                </td>
+                                <td><?php echo ($val["em_duties"]); ?></td>
+                                <td><?php echo ($val["department_boss"]); ?></td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
-                    </tbody>
-                </table>
-            </div>
-            <div class="page" id="page">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page" id="page">
+                </div>
             </div>
         </div>
     </div>
@@ -393,35 +358,62 @@
 
 <script>
     /*树形结构*/
-    $(function(){
+    $(function () {
         var defaultData = <?php echo ($departmenttree); ?>;
         $('#boxtree').treeview({
             expandIcon: 'glyphicon glyphicon-chevron-right',
             collapseIcon: 'glyphicon glyphicon-chevron-down',
             //nodeIcon: 'glyphicon glyphicon-bookmark',   //设置所有列表树节点上的默认图标。
             emptyIcon: "glyphicon glyphicon-chevron-right",
-            levels:'1',
+            levels: '1',
             data: defaultData
         });
     });
     /*分页*/
-    layui.use('laypage', function(){
+    layui.use('laypage', function () {
         var laypage = layui.laypage;
 
         //执行一个laypage实例
         laypage.render({
             elem: 'page' //注意，这里的 test1 是 ID，不用加 # 号
-            ,count: '<?php echo ($count); ?>' //数据总数，从服务端得到
-            ,layout: ['count',  'limit','prev', 'page', 'next']
-            ,limits: [5,10,20]
-            ,curr:'<?php echo ($curr); ?>'
-            ,limit:'<?php echo ($limits); ?>'
-            ,groups:'3'
-            ,jump: function(obj,first){
-                if(!first){
-                    var url = "<?php echo U('Home/Organize/organize_recard_show');?>?p="+obj.curr+'&limit='+obj.limit;
+            , count: '<?php echo ($count); ?>' //数据总数，从服务端得到
+            , layout: ['count', 'limit', 'prev', 'page', 'next']
+            , limits: [5, 10, 20]
+            , curr: '<?php echo ($curr); ?>'
+            , limit: '<?php echo ($limits); ?>'
+            , groups: '3'
+            , jump: function (obj, first) {
+                if (!first) {
+                    var url = "<?php echo U('Home/Organize/organize_recard_show');?>?p=" + obj.curr + '&limit=' + obj.limit;
                     window.location.href = url;
                 }
+            }
+        });
+    });
+</script>
+<!--搜索功能-->
+<script type="text/javascript">
+    $('#query_search').on('blur', function () {
+        var query_name = $('#query_search').val();
+        if (!query_name) {
+            message('请输入要查询的数据', ['200px', '50px']);
+            return false;
+        }
+        var search_url = "<?php echo U('/Home/Organize/organize_recard_search');?>";
+        $.ajax({
+            type: "POST",
+            url: search_url,
+            data: {'query_name': query_name},
+            async: true,
+            beforeSend: function () {
+                message('查询中,请稍等');
+            },
+            success: function (res) {
+                //console.log('邮件已发送');
+                $('#table_page').html(res);
+            }
+            , error: function () {
+                //console.log('邮件发送失败');
             }
         });
     });

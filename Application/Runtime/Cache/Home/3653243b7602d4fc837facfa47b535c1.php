@@ -16,7 +16,20 @@
 <link rel="stylesheet" href="/Public/resource/layui/css/layui.css">
 <script src="/Public/resource/layui/layui.js"></script>
 <!--layui引入 end-->
-
+<style>
+    a:link{
+        text-decoration:none;
+    }
+    a:visited{
+        text-decoration:none;
+    }
+    a:hover{
+        text-decoration:none;
+    }
+    a:active{
+        text-decoration:none;
+    }
+</style>
 <body>
 
 <!--header end-->
@@ -200,7 +213,7 @@
             <span class="off">组织管理</span>
 
                 <div class="list-1">
-                    <a href="<?php echo U('Home/OrganizeManage/structure');?>">
+                    <a href="<?php echo U('Home/Organize/organize_recard_show');?>">
                         <span class="off">组织架构</span>
                     </a>
                 </div>

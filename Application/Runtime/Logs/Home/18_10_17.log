@@ -1662,3 +1662,2642 @@ INFO: [ app_begin ] --END-- [ RunTime:0.000983s ]
 SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0131s ]
 SQL: SELECT * FROM `osa_department`  [ RunTime:0.0007s ]
 
+[ 2018-10-17T18:15:52+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000620s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000672s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010114s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010154s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000422s ]
+
+[ 2018-10-17T18:15:54+08:00 ] 127.0.0.1 /index.php/Home/Login/loginShow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2018-10-17T18:16:01+08:00 ] 127.0.0.1 /index.php/Home/Login/loginPro.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+SQL: SHOW COLUMNS FROM `osa_manager` [ RunTime:0.1804s ]
+SQL: SELECT `uid`,`username` FROM `osa_manager` WHERE ( username = 'admin' and password = '787222bc43251c9d734eb4365b595ba6' ) LIMIT 1   [ RunTime:0.0167s ]
+SQL: UPDATE `osa_manager` SET `login_time_last`='1539771361' WHERE `uid` = 2 [ RunTime:0.0239s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004489s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2018-10-17T18:16:04+08:00 ] 127.0.0.1 /index.php/Home/Main/main_workplace_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0348s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0627s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771363)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0314s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771363)/3600/24 < 60 and em_workstatus != 4 ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000610s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000645s ]
+
+[ 2018-10-17T18:16:06+08:00 ] 127.0.0.1 /index.php/Home/Organize/Organize_recard_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0068s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0077s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 0,10   [ RunTime:0.0014s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2018-10-17T18:16:09+08:00 ] 127.0.0.1 /index.php/Home/Attendance/attendance_record_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `osa_attendance` [ RunTime:0.0699s ]
+SQL: SELECT * FROM `osa_attendance` WHERE ( att_id > 0 ) GROUP BY FROM_UNIXTIME(att_import_time,'%Y-%m')  [ RunTime:0.0729s ]
+SQL: SELECT FROM_UNIXTIME(att_import_time,'%Y-%m') as s_month FROM `osa_attendance` WHERE ( att_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0414s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010763s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001083s ]
+
+[ 2018-10-17T18:16:12+08:00 ] 127.0.0.1 /index.php/Home/Employee/employee_roster_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001404s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0066s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0079s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 and em_workstatus !=4  ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 and em_workstatus !=4  ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+NOTIC: [8] Undefined variable: employee_status C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\e79f1098b505ab83ddcd46c9894e6fe7.php 第 351 行.
+NOTIC: [8] Undefined variable: employee_status C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\e79f1098b505ab83ddcd46c9894e6fe7.php 第 353 行.
+NOTIC: [8] Undefined variable: employee_status C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\e79f1098b505ab83ddcd46c9894e6fe7.php 第 412 行.
+NOTIC: [8] Use of undefined constant employeeShow - assumed 'employeeShow' C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\e79f1098b505ab83ddcd46c9894e6fe7.php 第 619 行.
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\e79f1098b505ab83ddcd46c9894e6fe7.php 第 619 行.
+NOTIC: [8] Use of undefined constant employeeShow - assumed 'employeeShow' C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\e79f1098b505ab83ddcd46c9894e6fe7.php 第 621 行.
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\OAS\Application\Runtime\Cache\Home\e79f1098b505ab83ddcd46c9894e6fe7.php 第 621 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057514s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2018-10-17T18:16:16+08:00 ] 127.0.0.1 /index.php/Home/Pay/payroll.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+SQL: SHOW COLUMNS FROM `osa_wages` [ RunTime:0.0759s ]
+SQL: SELECT * FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY pay_month  [ RunTime:0.0707s ]
+SQL: SELECT FROM_UNIXTIME(pay_month,'%Y-%m') as s_month FROM `osa_wages` WHERE ( pay_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000547s ]
+
+[ 2018-10-17T18:16:20+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0081s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008387s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000639s ]
+
+[ 2018-10-17T18:16:24+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_formal_half_a_month.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771384)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771384)/3600/24 < 15 and em_workstatus = 1 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021541s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2018-10-17T18:16:27+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_formal_half_a_month.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001345s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0209s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771387)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771387)/3600/24 < 15 and em_workstatus = 1 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2018-10-17T18:16:32+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026354s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2018-10-17T18:16:36+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_formal_half_a_month.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0081s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771396)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771396)/3600/24 < 15 and em_workstatus = 1 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2018-10-17T18:17:11+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_end.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0088s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771431)/3600/24 < 30 and em_workstatus != 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771431)/3600/24 < 30 and em_workstatus != 4 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014536s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000905s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000951s ]
+
+[ 2018-10-17T18:17:14+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_formal_half_a_month.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0084s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771434)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771434)/3600/24 < 15 and em_workstatus = 1 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009204s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009274s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000895s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2018-10-17T18:17:31+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_end.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0076s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771451)/3600/24 < 30 and em_workstatus != 4 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771451)/3600/24 < 30 and em_workstatus != 4 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014842s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000536s ]
+
+[ 2018-10-17T18:17:34+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_formal_half_a_month.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771454)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771454)/3600/24 < 15 and em_workstatus = 1 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000471s ]
+
+[ 2018-10-17T18:17:36+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_end.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0063s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771456)/3600/24 < 30 and em_workstatus != 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771456)/3600/24 < 30 and em_workstatus != 4 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000736s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2018-10-17T18:17:37+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_check.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007748s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2018-10-17T18:17:40+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010659s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010698s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2018-10-17T18:18:08+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_check.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011894s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2018-10-17T18:18:11+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_end.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0069s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771490)/3600/24 < 30 and em_workstatus != 4 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771490)/3600/24 < 30 and em_workstatus != 4 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025746s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025806s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000959s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001027s ]
+
+[ 2018-10-17T18:19:14+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_formal_half_a_month.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0215s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771554)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771554)/3600/24 < 15 and em_workstatus = 1 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008481s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2018-10-17T18:20:28+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001573s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0084s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011523s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2018-10-17T18:20:30+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_formal_half_a_month.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0071s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771630)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771630)/3600/24 < 15 and em_workstatus = 1 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008497s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008532s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2018-10-17T18:20:32+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_end.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771632)/3600/24 < 30 and em_workstatus != 4 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771632)/3600/24 < 30 and em_workstatus != 4 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009326s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2018-10-17T18:22:07+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0208s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011267s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000492s ]
+
+[ 2018-10-17T18:23:19+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0209s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011159s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000549s ]
+
+[ 2018-10-17T18:23:21+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010999s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000896s ]
+
+[ 2018-10-17T18:23:30+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0077s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010341s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010377s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2018-10-17T18:23:32+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000569s ]
+
+[ 2018-10-17T18:23:34+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0136s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018047s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000652s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2018-10-17T18:23:52+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_formal_half_a_month.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771832)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771832)/3600/24 < 15 and em_workstatus = 1 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015382s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001116s ]
+
+[ 2018-10-17T18:23:54+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_end.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0073s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771834)/3600/24 < 30 and em_workstatus != 4 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771834)/3600/24 < 30 and em_workstatus != 4 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009942s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001045s ]
+
+[ 2018-10-17T18:24:32+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_end.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771872)/3600/24 < 30 and em_workstatus != 4 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771872)/3600/24 < 30 and em_workstatus != 4 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018744s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000611s ]
+
+[ 2018-10-17T18:24:35+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0079s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009439s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2018-10-17T18:25:19+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0312s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0045s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000845s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000903s ]
+
+[ 2018-10-17T18:25:21+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_formal_half_a_month.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771921)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771921)/3600/24 < 15 and em_workstatus = 1 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021951s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001161s ]
+
+[ 2018-10-17T18:25:24+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_end.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0221s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771924)/3600/24 < 30 and em_workstatus != 4 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771924)/3600/24 < 30 and em_workstatus != 4 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009833s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009874s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000667s ]
+
+[ 2018-10-17T18:25:26+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009960s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000669s ]
+
+[ 2018-10-17T18:25:27+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_formal_half_a_month.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0071s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771927)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771927)/3600/24 < 15 and em_workstatus = 1 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2018-10-17T18:25:29+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_end.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771929)/3600/24 < 30 and em_workstatus != 4 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771929)/3600/24 < 30 and em_workstatus != 4 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009796s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009835s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000752s ]
+
+[ 2018-10-17T18:25:29+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_check.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011067s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001849s ]
+
+[ 2018-10-17T18:25:32+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_end.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0280s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771932)/3600/24 < 30 and em_workstatus != 4 ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_endtime -1539771932)/3600/24 < 30 and em_workstatus != 4 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000834s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001064s ]
+
+[ 2018-10-17T18:25:33+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_formal_half_a_month.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771933)/3600/24 < 15 and em_workstatus = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( (em_formaltime -1539771933)/3600/24 < 15 and em_workstatus = 1 ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030863s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000954s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001256s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001368s ]
+
+[ 2018-10-17T18:25:35+08:00 ] 127.0.0.1 /index.php/Home/Main/main_employee_birthday.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on em_department_first = department_id  WHERE ( FROM_UNIXTIME(em_birthday,'%Y-%m') = '2018-10' ) ORDER BY em_id desc LIMIT 0,10   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009117s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000765s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000811s ]
+
+[ 2018-10-17T18:25:50+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0202s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0089s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010642s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2018-10-17T18:26:21+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=2&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0067s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0063s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 10,10   [ RunTime:0.0007s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2018-10-17T18:26:24+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0075s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0007s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010560s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010593s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000459s ]
+
+[ 2018-10-17T18:27:57+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0201s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0069s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0012s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011422s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011459s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000525s ]
+
+[ 2018-10-17T18:28:02+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_export.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `osa_department`  [ RunTime:0.0007s ]
+
+[ 2018-10-17T18:41:52+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0057s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 0,10   [ RunTime:0.0013s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010378s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2018-10-17T18:41:54+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_department_size.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+ERR: 非法操作:organize_recard_department_size
+
+[ 2018-10-17T18:42:09+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_department_size.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+ERR: 非法操作:organize_recard_department_size
+
+[ 2018-10-17T18:43:01+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_department_size.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0083s ]
+SQL: SELECT `em_department_third` FROM `osa_employee` GROUP BY em_department_third  [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '55' ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-10-17T18:43:33+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_department_size.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0137s ]
+SQL: SELECT `em_department_third` FROM `osa_employee` GROUP BY em_department_third  [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '55' ) LIMIT 1   [ RunTime:0.0009s ]
+
+[ 2018-10-17T18:43:40+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_department_size.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0118s ]
+SQL: SELECT `em_department_third` FROM `osa_employee` GROUP BY em_department_third  [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '55' ) LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2018-10-17T18:44:04+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_department_size.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0087s ]
+SQL: SELECT `em_department_third` FROM `osa_employee` GROUP BY em_department_third  [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-10-17T18:46:42+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_department_size.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001066s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0071s ]
+SQL: SELECT `em_department_third` FROM `osa_employee` GROUP BY em_department_third  [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '55' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 84 行.
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0065s ]
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 55 [ RunTime:0.0003s ]
+
+[ 2018-10-17T18:47:14+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_department_size.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0089s ]
+SQL: SELECT `em_department_third` FROM `osa_employee` GROUP BY em_department_third  [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '55' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 85 行.
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0060s ]
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 55 [ RunTime:0.0003s ]
+
+[ 2018-10-17T18:48:06+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_department_size.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0116s ]
+SQL: SELECT `em_department_third` FROM `osa_employee` GROUP BY em_department_third  [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '55' ) LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 84 行.
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0093s ]
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 55 [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '61' ) LIMIT 1   [ RunTime:0.0009s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 84 行.
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 61 [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001187s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001264s ]
+
+[ 2018-10-17T18:51:38+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_department_size.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0227s ]
+SQL: SELECT `em_department_third` FROM `osa_employee` GROUP BY em_department_third  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '55' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 84 行.
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0068s ]
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 55 [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '61' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 84 行.
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 61 [ RunTime:0.0002s ]
+SQL: SELECT `em_department_second` FROM `osa_employee` GROUP BY em_department_second  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_second = '28' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 99 行.
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 28 [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_second = '30' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 99 行.
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 30 [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_second = '40' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 99 行.
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 40 [ RunTime:0.0003s ]
+SQL: SELECT `em_department_first` FROM `osa_employee` GROUP BY em_department_first  [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_first = '23' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 114 行.
+SQL: UPDATE `osa_department` SET `department_size`='1' WHERE `department_id` = 23 [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_first = '25' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 114 行.
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 25 [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000810s ]
+
+[ 2018-10-17T18:51:54+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_department_size.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0162s ]
+SQL: SELECT `em_department_third` FROM `osa_employee` GROUP BY em_department_third  [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '55' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 84 行.
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0133s ]
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 55 [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_third = '61' ) LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 84 行.
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 61 [ RunTime:0.0003s ]
+SQL: SELECT `em_department_second` FROM `osa_employee` GROUP BY em_department_second  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_second = '28' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 99 行.
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 28 [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_second = '30' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 99 行.
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 30 [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_second = '40' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 99 行.
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 40 [ RunTime:0.0002s ]
+SQL: SELECT `em_department_first` FROM `osa_employee` GROUP BY em_department_first  [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_first = '23' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 114 行.
+SQL: UPDATE `osa_department` SET `department_size`='1' WHERE `department_id` = 23 [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_department_first = '25' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Illegal string offset 'tp_count ' C:\Users\Administrator\Desktop\OAS\Application\Home\Controller\OrganizeController.class.php 第 114 行.
+SQL: UPDATE `osa_department` SET `department_size`='6' WHERE `department_id` = 25 [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001047s ]
+
+[ 2018-10-17T18:52:47+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0071s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0078s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010842s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010884s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000853s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2018-10-17T18:59:58+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0213s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2018-10-17T19:14:26+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0096s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0088s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0009s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014453s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014506s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001168s ]
+
+[ 2018-10-17T19:17:46+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0073s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0073s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0007s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012292s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012337s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2018-10-17T19:17:48+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000606s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2018-10-17T19:18:30+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0114s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0008s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011371s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000631s ]
+
+[ 2018-10-17T19:18:31+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+
+[ 2018-10-17T19:18:33+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2018-10-17T19:18:46+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0305s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0172s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0012s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016455s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000801s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000857s ]
+
+[ 2018-10-17T19:19:23+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0186s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0159s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0013s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017167s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000639s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2018-10-17T19:19:24+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0221s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0093s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0008s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000610s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000647s ]
+
+[ 2018-10-17T19:20:14+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2018-10-17T19:34:12+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001884s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0075s ]
+ERR: 1146:Table 'osa.department' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `osa_employee` INNER JOIN department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '总裁办' or department_name = '总裁办' ) 
+ERR: 1146:Table 'osa.department' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `osa_employee` INNER JOIN department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '总裁办' or department_name = '总裁办' ) 
+
+[ 2018-10-17T19:35:15+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '总裁办' or department_name = '总裁办' )  [ RunTime:0.0042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000676s ]
+
+[ 2018-10-17T19:36:54+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '财务运营中心' or department_name = '财务运营中心' )  [ RunTime:0.0046s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000682s ]
+
+[ 2018-10-17T19:37:20+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001435s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0073s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0011s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011176s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011211s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000525s ]
+
+[ 2018-10-17T19:37:30+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '财务运营中心' or department_name = '财务运营中心' ) GROUP BY em_id  [ RunTime:0.0070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000616s ]
+
+[ 2018-10-17T19:40:07+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0266s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0137s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0013s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021968s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000986s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001195s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001269s ]
+
+[ 2018-10-17T19:40:17+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0222s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '财务运营中心' or department_name = '财务运营中心' ) GROUP BY em_id  [ RunTime:0.0188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000731s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2018-10-17T19:40:31+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0333s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0192s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0020s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023987s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001086s ]
+
+[ 2018-10-17T19:40:39+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0216s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '财务运营中心' or department_name = '财务运营中心' ) GROUP BY em_id  [ RunTime:0.0073s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000059s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006659s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2018-10-17T19:42:30+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0210s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0074s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0009s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010147s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010218s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000534s ]
+
+[ 2018-10-17T19:42:49+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0221s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '财务运营中心' or department_name = '财务运营中心' ) GROUP BY em_id  [ RunTime:0.0081s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000057s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005714s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2018-10-17T19:43:10+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000859s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0073s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0012s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2018-10-17T19:45:50+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0242s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0015s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013396s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000705s ]
+
+[ 2018-10-17T19:45:58+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '财务运营中心' or department_name = '财务运营中心' ) GROUP BY em_id  [ RunTime:0.0164s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013095s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000800s ]
+
+[ 2018-10-17T19:46:39+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0192s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0014s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019807s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019887s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000793s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000826s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000882s ]
+
+[ 2018-10-17T19:46:45+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0194s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '财务运营中心' or department_name = '财务运营中心' ) GROUP BY em_id  [ RunTime:0.0204s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012282s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001140s ]
+
+[ 2018-10-17T19:47:07+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0286s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0069s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0007s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021109s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001169s ]
+
+[ 2018-10-17T19:47:09+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0098s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0021s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019052s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000950s ]
+
+[ 2018-10-17T19:47:13+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '财务运营中心' or department_name = '财务运营中心' ) GROUP BY em_id  [ RunTime:0.0071s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012322s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000844s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001286s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001377s ]
+
+[ 2018-10-17T19:55:57+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0132s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0116s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0014s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013350s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013407s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000776s ]
+
+[ 2018-10-17T19:56:28+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0075s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0010s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000696s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000750s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000486s ]
+
+[ 2018-10-17T19:56:43+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0167s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0147s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0011s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015232s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2018-10-17T19:56:49+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0209s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '财务运营中心' or department_name = '财务运营中心' ) GROUP BY em_id  [ RunTime:0.0074s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000055s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005866s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005916s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000498s ]
+
+[ 2018-10-17T19:57:26+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html?p=3&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0063s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0085s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 20,10   [ RunTime:0.0013s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018193s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018272s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000873s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001542s ]
+
+[ 2018-10-17T19:57:31+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '财务运营中心' or department_name = '财务运营中心' ) GROUP BY em_id  [ RunTime:0.0074s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000053s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005087s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000525s ]
+
+[ 2018-10-17T19:57:46+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0212s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '财务运营中心' or department_name = '财务运营中心' ) GROUP BY em_id  [ RunTime:0.0068s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006171s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006208s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2018-10-17T19:57:48+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `osa_employee` INNER JOIN osa_department on (osa_employee.em_department_first = osa_department.department_id
+	OR osa_employee.em_department_second = osa_department.department_id
+	OR osa_employee.em_department_third = osa_department.department_id)  WHERE ( em_username = '成文了' or department_name = '成文了' ) GROUP BY em_id  [ RunTime:0.0145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2018-10-17T19:59:12+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0165s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 0,10   [ RunTime:0.0017s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024940s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025029s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001065s ]
+
+[ 2018-10-17T19:59:25+08:00 ] 127.0.0.1 /index.php/Home/Attendance/attendance_record_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+SQL: SHOW COLUMNS FROM `osa_attendance` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `osa_attendance` WHERE ( att_id > 0 ) GROUP BY FROM_UNIXTIME(att_import_time,'%Y-%m')  [ RunTime:0.0111s ]
+SQL: SELECT FROM_UNIXTIME(att_import_time,'%Y-%m') as s_month FROM `osa_attendance` WHERE ( att_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0291s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008553s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008587s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001094s ]
+
+[ 2018-10-17T19:59:31+08:00 ] 127.0.0.1 /index.php/Home/Achievements/achievements_record_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012489s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000904s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000944s ]
+
+[ 2018-10-17T19:59:35+08:00 ] 127.0.0.1 /index.php/Home/SocialSecurity/socialsecurity_record_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+SQL: SHOW COLUMNS FROM `osa_social_security` [ RunTime:0.0644s ]
+SQL: SELECT * FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY FROM_UNIXTIME(s_import_time,'%Y-%m')  [ RunTime:0.0076s ]
+SQL: SELECT FROM_UNIXTIME(s_import_time,'%Y-%m') as s_month FROM `osa_social_security` WHERE ( s_id > 0 ) GROUP BY s_month LIMIT 0,10   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008737s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008777s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2018-10-17T20:04:30+08:00 ] 127.0.0.1 /index.php/Home/Organize/organize_recard_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+SQL: SHOW COLUMNS FROM `osa_department` [ RunTime:0.0215s ]
+SQL: SELECT CONCAT(department_name,'(',`department_size`,'人)') as text,`department_id`,department_superiorid as nodes FROM `osa_department`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `osa_employee` [ RunTime:0.0067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `osa_employee` WHERE ( em_id >0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `osa_employee` WHERE ( em_id >0 ) ORDER BY em_id asc LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '55' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '61' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `department_boss` FROM `osa_department` WHERE ( department_id = '40' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000509s ]
+
