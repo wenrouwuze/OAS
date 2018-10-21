@@ -1,7 +1,6 @@
 <?php
 
 namespace Home\Controller;
-
 use Think\Controller;
 
 class OrganizeController extends BaseController
@@ -131,8 +130,8 @@ class OrganizeController extends BaseController
         $list = $model->join('osa_department on (osa_employee.em_department_first = osa_department.department_id
 	OR osa_employee.em_department_second = osa_department.department_id
 	OR osa_employee.em_department_third = osa_department.department_id)')->where("em_username = '{$query_name}' or department_name = '{$query_name}'")->group('em_id')->select();
-
         $this->assign('list', $list);// 赋值数据集
         $this->display();
     }
+    /*组织管理-旺盛了。  */
 }
